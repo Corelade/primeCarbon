@@ -1,0 +1,14 @@
+.secbg{
+    background-image: url('../images/secbg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+.thirdbg{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.small{
+    font-size: 12px;
+}

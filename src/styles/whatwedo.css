@@ -1,0 +1,35 @@
+.wwdbi{
+    background-image: url('../images/wwdbi2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* width: 100%; */
+}
+.figures>div:not(:last-child){
+    border-right: 1px solid white;
+}
+.activeDetail{
+    transform: scale(1.1, 1.1);
+    transition: .5s;
+    /* box-shadow: 1px 1px 5px black; */
+}
+
+@keyframes anim {
+    0%{
+        transform: translate(-50px, -50px);
+        opacity: 0.3;
+        /* box-shadow: rgb(96, 93, 97) 0px 0px 0px 0px; */
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+        /* box-shadow: rgba(255, 224, 178, 0) 0px 0px 0px 80px; */
+    }
+}
+
+.anim {
+    animation-name: anim;
+    animation-duration: .3s;
+    -webkit-animation-timing-function: linear;
+    /* animation-direction: ; */
+}

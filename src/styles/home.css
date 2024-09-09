@@ -1,0 +1,101 @@
+.home_sect_cover {
+    background-color: #F1F1F1;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+
+.curs {
+    cursor: pointer;
+}
+
+.identities div,
+.blur {
+    background: #ffffff72;
+}
+
+.pictures img:not(:first-child) {
+    margin-top: -7px;
+}
+
+.home_sect_with_bg {
+    background-image: url('../images/home_bg2.png');
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    /* background-position: center; */
+}
+
+.green_text {
+    color: #84BD3A;
+}
+
+.interests {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 30px;
+}
+
+.interests_reverse {
+    grid-template-columns: 4fr 6fr;
+}
+
+.interests>div {
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.interest_one {
+    background-image: url('../images/interest1.png');
+}
+
+.interest_two {
+    background-image: url('../images/interest2.png');
+}
+
+.interest_three {
+    background-image: url('../images/interest3.png');
+}
+
+.interest_four {
+    background-image: url('../images/interest4.png');
+}
+
+.interests_arrow_container {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.map{
+    height: 80vh;
+    width: 80vw;
+}
+.moveDown{
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+
+@media screen and (max-width:768px) {
+    .home_sect_with_bg{
+        background-size: cover;
+        background-position: top;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        /* background-position-x: right; */
+    }
+    .interests{
+        grid-template-columns: 1fr;
+        gap: 30;
+    }
+    .interests>div{
+        height: 220px;
+    }
+    .map{
+        height: 200px;
+    }
+}
