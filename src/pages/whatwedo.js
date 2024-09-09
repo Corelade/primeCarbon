@@ -39,7 +39,7 @@ export default function WhatWeDo() {
                                 <div className="mulish_regular">Hectares of forest protected</div>
                             </div>
                             <div className="d-flex flex-column align-items-center col-3">
-                                <h1 className="felix_regular m-0">124+<span style={{ color: 'green' }}>+</span></h1>
+                                <h1 className="felix_regular m-0">124<span style={{ color: 'green' }}>+</span></h1>
                                 <div className="mulish_regular">Hectares of forest protected</div>
                             </div>
                         </div>
