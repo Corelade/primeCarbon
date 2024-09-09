@@ -1,7 +1,7 @@
 import Layout from "../components/layout";
-import abc1 from '../images/abc1.png';
+// import abc1 from '../images/abc1.png';
 import abc2 from '../images/abc2.png';
-import checkbox from '../images/checkbox.png';
+// import checkbox from '../images/checkbox.png';
 import '../styles/about.css';
 import '../styles/home.css';
 import { useState } from "react";

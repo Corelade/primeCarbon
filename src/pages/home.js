@@ -1,10 +1,10 @@
 import Layout from "../components/layout";
 import '../styles/home.css';
-import person1 from '../images/person1.png';
-import person2 from '../images/person2.png';
-import person3 from '../images/person3.png';
-import wtpc1 from '../images/wtpc1.png';
-import wtpc2 from '../images/wtpc2.png';
+// import person1 from '../images/person1.png';
+// import person2 from '../images/person2.png';
+// import person3 from '../images/person3.png';
+// import wtpc1 from '../images/wtpc1.png';
+// import wtpc2 from '../images/wtpc2.png';
 import { useState } from "react";
 import ourp1 from '../images/ourp1.png';
 import map from '../images/map.png';
@@ -12,7 +12,7 @@ import map from '../images/map.png';
 
 export default function Home() {
 
-    const [activeInterest, setActiveInterest] = useState(0);
+    // const [activeInterest, setActiveInterest] = useState(0);
     const [hovered, setHovered] = useState(false);
     const [activeBox, setActiveBox] = useState(0);
 

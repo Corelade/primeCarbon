@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import logoWhite from '../images/logo-white.png';
+// import logoWhite from '../images/logo-white.png';
 import logo2 from '../images/logo2.png';
 import '../styles/layout.css';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -32,7 +32,7 @@ function Navbar(props) {
     const { useBackground = true } = props;
     const path = window.location.pathname;
     const navigate = useNavigate();
-    const [addColor, setAddColor] = useState(false);
+    // const [addColor, setAddColor] = useState(false);
 
     // useEffect(() => {
 

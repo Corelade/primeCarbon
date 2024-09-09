@@ -52,6 +52,7 @@ function Newslinks(props) {
             <p className="inter_regular normal_text" style={{ color: '#475467' }}>
                 Trees store carbon. When a tree is cut down that carbon is released as carbon dioxide emissions into the atmosphere, contributing to climate change.
             </p>
+            {/* eslint-disable-next-line */}
             <a href="#" style={{color:'#19AB4F'}} className="inter_regular">Read More...</a>
         </div>
 

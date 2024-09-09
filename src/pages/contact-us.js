@@ -19,23 +19,23 @@ export default function ContactPage() {
                         <form className="row g-4">
                             <div className="col-md-6">
                                 <label for="fullname" className="form-label manrope_semibold small">Fullname</label>
-                                <input type="text" className="form-control small" id="fullname" placeholder="Full Name"/>
+                                <input type="text" className="form-control small" id="fullname" placeholder="Full Name" />
                             </div>
                             <div className="col-md-6">
                                 <label for="phone" className="form-label manrope_semibold small">Phone</label>
-                                <input type="number" className="form-control small" id="phone" placeholder="+234 000 000 000 0000"/>
+                                <input type="number" className="form-control small" id="phone" placeholder="+234 000 000 000 0000" />
                             </div>
                             <div className="col-md-6">
                                 <label for="email" className="form-label manrope_semibold small">Email</label>
-                                <input type="email" className="form-control" id="email" placeholder="hello@creative-tim.com"/>
+                                <input type="email" className="form-control" id="email" placeholder="hello@creative-tim.com" />
                             </div>
                             <div className="col-md-6">
                                 <label for="location" className="form-label manrope_semibold small">Location</label>
-                                <input type="text" className="form-control" id="location" placeholder="Nigeria"/>
+                                <input type="text" className="form-control" id="location" placeholder="Nigeria" />
                             </div>
                             <div className="">
                                 <label for="floatingTextarea" className="manrope_semibold small">What would you like to tell us?</label>
-                                <textarea className="form-control small" placeholder="Enter your message here" id="floatingTextarea" rows='5' style={{resize:'none'}}></textarea>
+                                <textarea className="form-control small" placeholder="Enter your message here" id="floatingTextarea" rows='5' style={{ resize: 'none' }}></textarea>
                             </div>
                             <div className="col-12 text-center">
                                 <button type="submit" className="btn btn-primary rounded-pill manrope-semibold bg-black text-white border border-0 small">
@@ -44,6 +44,7 @@ export default function ContactPage() {
                         </form>
                     </div>
                 </div>
+
             </div>
         </Layout>
     )

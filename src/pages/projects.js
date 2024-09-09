@@ -1,5 +1,5 @@
 import Layout from "../components/layout";
-import ourp2 from '../images/ourp2.png';
+// import ourp2 from '../images/ourp2.png';
 import ourp4 from '../images/ourp4.png';
 import '../styles/about.css';
 import { CustomBg } from "./about";
