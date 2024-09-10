@@ -14,7 +14,6 @@ export default function Home() {
 
     // const [activeInterest, setActiveInterest] = useState(0);
     const [hovered, setHovered] = useState(false);
-    const [activeBox, setActiveBox] = useState(0);
 
     return (
         <Layout useBackground={false}>
@@ -64,25 +63,25 @@ export default function Home() {
                             <div className="my-5">
                                 <div className="p-5 d-flex flex-row justify-content-center">
                                     <div className="col-8">
-                                        <h1 className="felix_regular big_text text-center" style={{color:'#101828'}}>Welcome to Prime Carbon</h1>
+                                        <h1 className="felix_regular big_text text-center" style={{ color: '#101828' }}>Welcome to Prime Carbon</h1>
                                         <p className="manrope_regular text-center my-5 normal_text" style={{ color: '#475467' }}>Founded in 2024, We are a sustainability-focused company dedicated to preserving our planet through innovative environmental solutions. We specialize in carbon sequestration, afforestation, and reforestation initiatives, along with the development of clean energy solutions, including wind and solar power, carbon capture, and energy storage.</p>
                                         <div className="d-flex flex-column align-items-center">
                                             <div className="medium_text">
                                                 <div>
-                                                    <span className="green_text akazan_bold" style={{letterSpacing:'0.5vw'}}>01/ </span>
-                                                    <b className="felix_regular ms-1" style={{color:'#101828' }}> Carbon Sequestration</b>
+                                                    <span className="green_text akazan_bold" style={{ letterSpacing: '0.5vw' }}>01/ </span>
+                                                    <b className="felix_regular ms-1" style={{ color: '#101828' }}> Carbon Sequestration</b>
                                                 </div>
                                                 <div>
-                                                    <span className="green_text akazan_bold" style={{letterSpacing:'0.5vw'}}>02/ </span>
-                                                    <b className="felix_regular ms-1" style={{color:'#101828' }}> Afforestation & Reforestation</b>
+                                                    <span className="green_text akazan_bold" style={{ letterSpacing: '0.5vw' }}>02/ </span>
+                                                    <b className="felix_regular ms-1" style={{ color: '#101828' }}> Afforestation & Reforestation</b>
                                                 </div>
                                                 <div>
-                                                    <span className="green_text akazan_bold" style={{letterSpacing:'0.5vw'}}>03/ </span>
-                                                    <b className="felix_regular ms-1" style={{color:'#101828' }}> Corporate Social Responsibility (CSR)</b>
+                                                    <span className="green_text akazan_bold" style={{ letterSpacing: '0.5vw' }}>03/ </span>
+                                                    <b className="felix_regular ms-1" style={{ color: '#101828' }}> Corporate Social Responsibility (CSR)</b>
                                                 </div>
                                                 <div>
-                                                    <span className="green_text akazan_bold" style={{letterSpacing:'0.5vw'}}>04/ </span>
-                                                    <b className="felix_regular ms-1" style={{color:'#101828' }}> Funding and Collaboration</b>
+                                                    <span className="green_text akazan_bold" style={{ letterSpacing: '0.5vw' }}>04/ </span>
+                                                    <b className="felix_regular ms-1" style={{ color: '#101828' }}> Funding and Collaboration</b>
                                                 </div>
 
                                             </div>
@@ -94,30 +93,7 @@ export default function Home() {
                                         <img src={wtpc2} height='' width='' alt="Using cutting-edge technologies to boost the efficiency & sustainability of our conservation efforts." className="d-block d-md-none col-12 my-3" />
                                     </div> */}
                                 </div>
-                                <div className="">
-                                    <div className="col-12 d-flex flex-column flex-md-row justify-content-around py-5 text-white flex-wrap">
-                                        <div className="col-8 mx-auto mx-md-0 col-lg-5 rounded-4 mission p-4 d-flex flex-column justify-content-end my-2 my-lg-0" onMouseEnter={() => setActiveBox(1)} onMouseLeave={() => setActiveBox(0)}>
-                                            {activeBox !== 1 ? (
-                                                <h1 className="felix_regular ps-3">Mission</h1>
-                                            ) : (
-                                                <div className="blur rounded-4 p-3">
-                                                    <h1 className="bricolage_bold">Mission</h1>
-                                                    <p className="manrope_semibold">Prime Carbon generates sustainable projects focused on reducing carbon footprints, primarily within the voluntary carbon market, with a strong commitment to CSR</p>
-                                                </div>
-                                            )}
-                                        </div>
-                                        <div className="col-8 mx-auto mx-md-0 col-lg-5 rounded-4 vision p-4 d-flex flex-column justify-content-end my-2 my-lg-0" onMouseEnter={() => setActiveBox(2)} onMouseLeave={() => setActiveBox(0)}>
-                                            {activeBox !== 2 ? (
-                                                <h1 className="felix_regular ps-3">Vision</h1>
-                                            ) : (
-                                                <div className="blur rounded-4 p-3">
-                                                    <h1 className="bricolage_bold">Vision</h1>
-                                                    <p className="manrope_semibold">To be global leaders in sustainable invetsments, driving impactful change and inspiring commitment to environmental stewardship</p>
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
-                                </div>
+                                <MissionVision />
                                 <div className="my-5 p-3" style={{ backgroundColor: '#F1F1F1' }}>
                                     <div className="d-flex flex-column flex-md-row justify-content-evenly align-items-center py-5">
                                         <div className="col-12 col-md-3 text-center">
@@ -141,7 +117,7 @@ export default function Home() {
 
                                     </div>
                                     <div className="text-center py-5 col-12">
-                                        <h1 className="felix_regular" style={{color:'#101828'}}>Our Projects</h1>
+                                        <h1 className="felix_regular" style={{ color: '#101828' }}>Our Projects</h1>
                                         <div className="mt-5">
                                             <img src={map} alt="world map" className="map" />
                                         </div>
@@ -275,6 +251,38 @@ export function ExploreProjectButton(props) {
     return (
         <div className={`rounded-pill border ${def ? 'border-black text-black border-2' : 'border-white text-white'} p-2 text-center curs manrope_semibold`} style={{ width: '300px', fontSize: '20px' }}>
             Explore Projects
+        </div>
+    )
+}
+
+export function MissionVision() {
+
+    const [activeBox, setActiveBox] = useState(0);
+
+    return (
+        <div className="">
+            <div className="col-12 d-flex flex-column flex-md-row justify-content-around py-5 text-white flex-wrap">
+                <div className="col-8 mx-auto mx-md-0 col-lg-5 rounded-4 mission p-4 d-flex flex-column justify-content-end my-2 my-lg-0" onMouseEnter={() => setActiveBox(1)} onMouseLeave={() => setActiveBox(0)}>
+
+                    <h1 className={`felix_regular ps-3 ${activeBox === 1 ? 'd-none' : 'd-block'} `}>Mission</h1>
+
+                    <div className={`blur rounded-4 p-3 ${activeBox === 1 ? 'show-content' : 'd-none'}`}>
+                        <h1 className="bricolage_bold">Mission</h1>
+                        <p className="manrope_semibold">Prime Carbon generates sustainable projects focused on reducing carbon footprints, primarily within the voluntary carbon market, with a strong commitment to CSR</p>
+                    </div>
+
+                </div>
+                <div className="col-8 mx-auto mx-md-0 col-lg-5 rounded-4 vision p-4 d-flex flex-column justify-content-end my-2 my-lg-0" onMouseEnter={() => setActiveBox(2)} onMouseLeave={() => setActiveBox(0)}>
+
+                    <h1 className={`felix_regular ps-3 ${activeBox === 2 ? 'd-none' : 'd-block'} `}>Vision</h1>
+
+                    <div className={`blur rounded-4 p-3 ${activeBox === 2 ? 'show-content' : 'd-none'}`}>
+                        <h1 className="bricolage_bold">Vision</h1>
+                        <p className="manrope_semibold">To be global leaders in sustainable invetsments, driving impactful change and inspiring commitment to environmental stewardship</p>
+                    </div>
+
+                </div>
+            </div>
         </div>
     )
 }

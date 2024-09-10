@@ -112,3 +112,11 @@
         height: 220px;
     }
 }
+
+@media screen and (min-width: 1440px){
+    body{
+        width: 1440px; 
+        /* border: 10px solid red; */
+        margin: auto;
+    }
+}

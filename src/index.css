@@ -45,6 +45,12 @@ code {
   font-style: normal;
 }
 
+.manrope_light{
+  font-family: "Manrope", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
 .manrope_semibold{
   font-family: "Manrope", sans-serif;
   font-weight: 600;
