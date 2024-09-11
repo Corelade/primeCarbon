@@ -132,15 +132,15 @@ export function CustomBg() {
     const path = window.location.pathname;
     const isMobile = useMediaQuery({ maxWidth: 768 });
     
-    let myClass;
     let myHeight='700px';
     let mt;
     let myWidth = 'w-50';
-
+    
     if(isMobile){
-        if(path === '/about'){
-            myClass = 'flex'
-        }
+        // let myClass;
+        // if(path === '/about'){
+        //     myClass = 'flex'
+        // }
         myHeight = '970px';
         mt = '-130px';
         myWidth = 'w-100'

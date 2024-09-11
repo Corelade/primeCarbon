@@ -51,7 +51,7 @@ function Navbar(props) {
                 setDark(true);
             }
         }
-    }, [])
+    }, [isMobile, path])
 
 
     return (

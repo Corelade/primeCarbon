@@ -3,12 +3,12 @@ import '../styles/news.css';
 import '../styles/whatwedo.css';
 import newsimage2 from '../images/newsimage2.png';
 import { useState } from "react";
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
 
 
 export default function News() {
 
-    const isMobile = useMediaQuery({ maxWidth: 768 });
+    // const isMobile = useMediaQuery({ maxWidth: 768 });
 
     const links = [];
 
