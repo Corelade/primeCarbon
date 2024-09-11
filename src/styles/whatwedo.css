@@ -57,5 +57,7 @@
     .figures>div:nth-child(-n+2){
         margin-bottom: 20px;
     }
-
+    .wwdbi{
+        background-image: url('../images/wwdbi3.png');
+    }
 }

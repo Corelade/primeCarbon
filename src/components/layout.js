@@ -59,7 +59,7 @@ function Navbar(props) {
             <div>
                 <img src={dark ? logo3 : logo2} alt='PrimeCarbon Logo' className='curs logo' />
             </div>
-            <div className='d-flex flex-row nav_links manrope_regular d-none d-md-flex'>
+            <div className='d-flex flex-row nav_links manrope_regular d-none d-lg-flex'>
                 <div className={`${path === '/' && 'activePage'} rounded-pill`} onClick={() => navigate('/')}>Home</div>
                 <div className={`${path === '/about' && 'activePage'} rounded-pill`} onClick={() => navigate('/about')}>About Us</div>
                 <div className={`${path === '/what-we-do' && 'activePage'} rounded-pill`} onClick={() => navigate('/what-we-do')}>What We Do</div>
@@ -68,7 +68,7 @@ function Navbar(props) {
                 <div className={`${path === '/publications' && 'activePage'} rounded-pill`} onClick={() => navigate('/publications')}>Publications</div>
                 <div className={`${path === '/contact' && 'activePage'} rounded-pill`} onClick={() => navigate('/contact')}>Contact Us</div>
             </div>
-            <div className='d-md-none curs'>
+            <div className='d-lg-none curs'>
                 {dark ? (
                     <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg" className='dropdown_menu position-relative mb-3' onClick={() => setShow(!show)}>
                         <path d="M2.3335 19.3334H25.6668M2.3335 11.0001H25.6668M2.3335 2.66675H25.6668" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />

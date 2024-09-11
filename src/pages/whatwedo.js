@@ -11,7 +11,7 @@ export default function WhatWeDo() {
     let myHeight = '600px'
     if(isMobile){
         mt = '-130px';
-        myHeight = '830px'
+        myHeight = '1000px'
     }
 
     return (
@@ -25,7 +25,7 @@ export default function WhatWeDo() {
                                 Our comprehensive approach to project development, strong stakeholder engagement, and dedication to high standards of verification and transparency ensure that we continue to grow and thrive in the evolving carbon market.
                             </p>
                         </div>
-                        <div className="d-flex flex-row rounded-bottom-4 text-white align-items-center justify-content-between p-3 px-md-5 flex-wrap figures text-center" style={{ backgroundColor: '#043A3A'}}>
+                        <div className="d-flex flex-row rounded-bottom-4 text-white align-items-center justify-content-between p-3 px-md-5 flex-wrap figures text-center mb-5 mb-md-0" style={{ backgroundColor: '#043A3A'}}>
                             <div className="d-flex flex-column align-items-center col-6 col-md-3 flex-wrap">
                                 <h1 className="felix_regular m-0">1.2M<span style={{ color: 'green' }}>+</span></h1>
                                 <div className="mulish_regular">Hectares of forest protected</div>
@@ -45,9 +45,9 @@ export default function WhatWeDo() {
                         </div>
                     </div>
                     <div className="mt-5 py-5">
-                        <div className="col-8 mx-auto text-center">
+                        <div className="col-10 col-md-8 mx-auto text-center">
                             <h1 className="felix_regular" style={{ color: '#101828' }}>How we make a difference</h1>
-                            <p className="inter_regular" style={{ color: '#101828', fontSize: '12px' }}>
+                            <p className="inter_regular" style={{ color: '#101828' }}>
                                 Transparency and community engagement are at the heart of everything we do. We ensure that all our projects align with broader social and environmental goals, actively involving local communities in sustainable development and educational programs. This collaborative approach helps us address environmental challenges while contributing to the socio-economic upliftment of the communities we serve.˝
                             </p>
                         </div>

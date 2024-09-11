@@ -14,11 +14,12 @@
 }
 
 .mission {
-    background-image: url('../images/mission2.png');
+    background-image: url('../images/mission.webp');
 }
 
 .vision {
-    background-image: url('../images/vision.png');
+    background-image: url('../images/vision.webp');
+    background-size: 330%;
 }
 
 .stakeholder {
