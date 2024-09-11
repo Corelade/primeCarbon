@@ -12,8 +12,6 @@ import { MissionVision } from "./home";
 
 export default function About() {
 
-    const [activeBox, setActiveBox] = useState(0);
-
     return (
         <Layout useBackground={true}>
             <CustomBg />
