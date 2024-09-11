@@ -114,8 +114,8 @@
 
 @media screen and (max-width:768px) {
     .logo {
-        height: 40px;
-        width: 75px;
+        height: 65px;
+        width: 90px;
     }
 
     /* .big_text {
@@ -137,4 +137,11 @@
         /* border: 10px solid red; */
         margin: auto;
     }
+}
+
+.dropdown-content{
+    display: none;
+}
+.dropdown_menu:hover .dropdown-content{
+    display: block;
 }

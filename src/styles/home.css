@@ -99,8 +99,8 @@
     .home_sect_with_bg{
         background-size: cover;
         background-position: top;
-        border-bottom-left-radius: 50px;
-        border-bottom-right-radius: 50px;
+        /* border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px; */
         /* background-position-x: right; */
     }
     .interests{

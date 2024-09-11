@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost:3001/about -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <link rel="icon" href="http://localhost:3001/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Web site created using create-react-app">
+  <link rel="apple-touch-icon" href="http://localhost:3001/logo192.png">
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="http://localhost:3001/manifest.json">
+  <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;family=Mulish:ital,wght@0,200..1000;1,200..1000&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
+  <title>React App</title>
+<script defer="" src="./React App_files/bundle.js"></script><style>@font-face {
+  font-family: 'Felix Titling';
+  src: url(http://localhost:3001/static/media/felixtitling.5a7370aa27b92cbaec0e.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+.felix_regular{
+  font-family: 'Felix Titling', sans-serif;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Akazan';
+  src: url("http://localhost:3001/static/media/Akazan%20Regular.e5996dfc2bcc2467b515.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+.akazan_bold{
+  font-family: 'Akazan', sans-serif;
+  font-weight: 700;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.manrope_regular{
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.manrope_light{
+  font-family: "Manrope", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.manrope_semibold{
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.manrope_bold{
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.bricolage_regular{
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bricolage_semibold{
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.bricolage_bold{
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.mulish_regular{
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter_regular {
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSw0QkFBNEI7RUFDNUIsNENBQWtFO0VBQ2xFLG1CQUFtQjtFQUNuQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSx3Q0FBd0M7RUFDeEMsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UscUJBQXFCO0VBQ3JCLDRDQUF5RDtFQUN6RCxrQkFBa0I7RUFDbEIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsaUNBQWlDO0VBQ2pDLGdCQUFnQjtBQUNsQjs7O0FBR0E7RUFDRSxTQUFTO0VBQ1Q7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0VBQ2xDLFVBQVU7RUFDVixzQkFBc0I7QUFDeEI7O0FBRUE7RUFDRTthQUNXO0FBQ2I7O0FBRUE7RUFDRSxrQ0FBa0M7RUFDbEMsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGtDQUFrQztFQUNsQyxnQkFBZ0I7RUFDaEIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0Usa0NBQWtDO0VBQ2xDLGdCQUFnQjtFQUNoQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQ0FBa0M7RUFDbEMsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLDhDQUE4QztFQUM5QyxnQkFBZ0I7RUFDaEIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsOENBQThDO0VBQzlDLGdCQUFnQjtFQUNoQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSw4Q0FBOEM7RUFDOUMsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGlDQUFpQztFQUNqQyxnQkFBZ0I7RUFDaEIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsZ0NBQWdDO0VBQ2hDLG1CQUFtQjtFQUNuQixrQkFBa0I7QUFDcEIiLCJzb3VyY2VzQ29udGVudCI6WyJAZm9udC1mYWNlIHtcbiAgZm9udC1mYW1pbHk6ICdGZWxpeCBUaXRsaW5nJztcbiAgc3JjOiB1cmwoJy9zcmMvZm9udHMvZmVsaXgtdGl0bGluZy1yZWd1bGFyLWZvbnQvZmVsaXh0aXRsaW5nLnR0ZicpO1xuICBmb250LXdlaWdodDogbm9ybWFsO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbi5mZWxpeF9yZWd1bGFye1xuICBmb250LWZhbWlseTogJ0ZlbGl4IFRpdGxpbmcnLCBzYW5zLXNlcmlmO1xuICBmb250LXdlaWdodDogNDAwO1xufVxuXG5AZm9udC1mYWNlIHtcbiAgZm9udC1mYW1pbHk6ICdBa2F6YW4nO1xuICBzcmM6IHVybCgnL3NyYy9mb250cy9Ba2F6YW5cXCBSZWd1bGFyL0FrYXphbiBSZWd1bGFyLnR0ZicpO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG4gIGZvbnQtd2VpZ2h0OiBub3JtYWw7XG59XG5cbi5ha2F6YW5fYm9sZHtcbiAgZm9udC1mYW1pbHk6ICdBa2F6YW4nLCBzYW5zLXNlcmlmO1xuICBmb250LXdlaWdodDogNzAwO1xufVxuXG5cbmJvZHkge1xuICBtYXJnaW46IDA7XG4gIGZvbnQtZmFtaWx5OiAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsICdTZWdvZSBVSScsICdSb2JvdG8nLCAnT3h5Z2VuJyxcbiAgICAnVWJ1bnR1JywgJ0NhbnRhcmVsbCcsICdGaXJhIFNhbnMnLCAnRHJvaWQgU2FucycsICdIZWx2ZXRpY2EgTmV1ZScsXG4gICAgc2Fucy1zZXJpZjtcbiAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XG4gIC1tb3otb3N4LWZvbnQtc21vb3RoaW5nOiBncmF5c2NhbGU7XG4gIHBhZGRpbmc6IDA7XG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG59XG5cbmNvZGUge1xuICBmb250LWZhbWlseTogc291cmNlLWNvZGUtcHJvLCBNZW5sbywgTW9uYWNvLCBDb25zb2xhcywgJ0NvdXJpZXIgTmV3JyxcbiAgICBtb25vc3BhY2U7XG59XG5cbi5tYW5yb3BlX3JlZ3VsYXJ7XG4gIGZvbnQtZmFtaWx5OiBcIk1hbnJvcGVcIiwgc2Fucy1zZXJpZjtcbiAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xufVxuXG4ubWFucm9wZV9saWdodHtcbiAgZm9udC1mYW1pbHk6IFwiTWFucm9wZVwiLCBzYW5zLXNlcmlmO1xuICBmb250LXdlaWdodDogMjAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbi5tYW5yb3BlX3NlbWlib2xke1xuICBmb250LWZhbWlseTogXCJNYW5yb3BlXCIsIHNhbnMtc2VyaWY7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbn1cblxuLm1hbnJvcGVfYm9sZHtcbiAgZm9udC1mYW1pbHk6IFwiTWFucm9wZVwiLCBzYW5zLXNlcmlmO1xuICBmb250LXdlaWdodDogODAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbi5icmljb2xhZ2VfcmVndWxhcntcbiAgZm9udC1mYW1pbHk6IFwiQnJpY29sYWdlIEdyb3Rlc3F1ZVwiLCBzYW5zLXNlcmlmO1xuICBmb250LXdlaWdodDogNDAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbi5icmljb2xhZ2Vfc2VtaWJvbGR7XG4gIGZvbnQtZmFtaWx5OiBcIkJyaWNvbGFnZSBHcm90ZXNxdWVcIiwgc2Fucy1zZXJpZjtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xufVxuXG4uYnJpY29sYWdlX2JvbGR7XG4gIGZvbnQtZmFtaWx5OiBcIkJyaWNvbGFnZSBHcm90ZXNxdWVcIiwgc2Fucy1zZXJpZjtcbiAgZm9udC13ZWlnaHQ6IDgwMDtcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xufVxuXG4ubXVsaXNoX3JlZ3VsYXJ7XG4gIGZvbnQtZmFtaWx5OiBcIk11bGlzaFwiLCBzYW5zLXNlcmlmO1xuICBmb250LXdlaWdodDogNDAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbi5pbnRlcl9yZWd1bGFyIHtcbiAgZm9udC1mYW1pbHk6IFwiSW50ZXJcIiwgc2Fucy1zZXJpZjtcbiAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */</style><style>.nav_links div,
+.wwdcb {
+    border: 1px solid white;
+    width: 10vw;
+    text-align: center;
+    margin: 2px;
+    /* border-radius: 15px; */
+    font-size: 14px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* .nav_links_reverse div{
+    border: 1px solid black;
+} */
+
+.nav_links div:hover,
+.wwdcb:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.footer_nav div {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
+.active_question {
+    background-color: #37424C !important;
+    color: white;
+    transition: .5s;
+}
+
+.cus1 {
+    background-image: url(http://localhost:3001/static/media/cus1.e9f79d885269b7cbbe7b.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.activePage {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.big_text {
+    font-size: 4vw;
+}
+
+.normal_text {
+    font-size: 1vw;
+}
+
+.medium_text {
+    font-size: 1.5vw;
+}
+
+.semi_large_text {
+    font-size: 2vw;
+}
+
+.logo {
+    height: 100px;
+    width: 150px;
+}
+
+.cus_cover {
+    height: 600px;
+}
+
+.add-color {
+    background-color: black;
+    z-index: 2;
+    transition: .5s;
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* @keyframes changeAngle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+} */
+
+.change-angle{
+    transform: rotate(180deg);
+    transition: .5s;
+}
+.reverse-angle{
+    transform: rotate(0deg);
+    transition: .5s;
+}
+
+/* .myfade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+} */
+
+@media screen and (max-width:768px) {
+    .logo {
+        height: 65px;
+        width: 90px;
+    }
+
+    /* .big_text {
+        font-size: 30px;
+    } */
+
+    .question {
+        font-size: 12px;
+    }
+
+    .cus_cover {
+        height: 220px;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    body{
+        width: 1440px; 
+        /* border: 10px solid red; */
+        margin: auto;
+    }
+}
+
+.dropdown-content{
+    display: none;
+}
+.dropdown_menu:hover .dropdown-content{
+    display: block;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zdHlsZXMvbGF5b3V0LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7SUFFSSx1QkFBdUI7SUFDdkIsV0FBVztJQUNYLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gseUJBQXlCO0lBQ3pCLGVBQWU7SUFDZixZQUFZO0lBQ1osZUFBZTtBQUNuQjs7QUFFQTs7R0FFRzs7QUFFSDs7SUFFSSx1QkFBdUI7SUFDdkIsWUFBWTtJQUNaLGdCQUFnQjtJQUNoQixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSTs7cUNBRWlDO0FBQ3JDOztBQUVBO0lBQ0ksb0NBQW9DO0lBQ3BDLFlBQVk7SUFDWixlQUFlO0FBQ25COztBQUVBO0lBQ0kseURBQTJDO0lBQzNDLHdCQUF3QjtJQUN4Qiw0QkFBNEI7SUFDNUIsNkJBQTZCO0FBQ2pDOztBQUVBO0lBQ0ksdUJBQXVCO0lBQ3ZCLFlBQVk7SUFDWixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksY0FBYztBQUNsQjs7QUFFQTtJQUNJLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGFBQWE7QUFDakI7O0FBRUE7SUFDSSx1QkFBdUI7SUFDdkIsVUFBVTtJQUNWLGVBQWU7QUFDbkI7OztBQUdBO0lBQ0k7UUFDSSxZQUFZO0lBQ2hCOztJQUVBO1FBQ0ksVUFBVTtJQUNkO0FBQ0o7O0FBRUE7Ozs7Ozs7R0FPRzs7QUFFSDtJQUNJLHlCQUF5QjtJQUN6QixlQUFlO0FBQ25CO0FBQ0E7SUFDSSx1QkFBdUI7SUFDdkIsZUFBZTtBQUNuQjs7QUFFQTs7O0dBR0c7O0FBRUg7SUFDSTtRQUNJLFlBQVk7UUFDWixXQUFXO0lBQ2Y7O0lBRUE7O09BRUc7O0lBRUg7UUFDSSxlQUFlO0lBQ25COztJQUVBO1FBQ0ksYUFBYTtJQUNqQjtBQUNKOztBQUVBO0lBQ0k7UUFDSSxhQUFhO1FBQ2IsNEJBQTRCO1FBQzVCLFlBQVk7SUFDaEI7QUFDSjs7QUFFQTtJQUNJLGFBQWE7QUFDakI7QUFDQTtJQUNJLGNBQWM7QUFDbEIiLCJzb3VyY2VzQ29udGVudCI6WyIubmF2X2xpbmtzIGRpdixcbi53d2RjYiB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgd2hpdGU7XG4gICAgd2lkdGg6IDEwdnc7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbjogMnB4O1xuICAgIC8qIGJvcmRlci1yYWRpdXM6IDE1cHg7ICovXG4gICAgZm9udC1zaXplOiAxNHB4O1xuICAgIHBhZGRpbmc6IDVweDtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi8qIC5uYXZfbGlua3NfcmV2ZXJzZSBkaXZ7XG4gICAgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7XG59ICovXG5cbi5uYXZfbGlua3MgZGl2OmhvdmVyLFxuLnd3ZGNiOmhvdmVyIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgdHJhbnNpdGlvbjogMC4zcztcbiAgICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmZvb3Rlcl9uYXYgZGl2IHtcbiAgICAvKiBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOyAqL1xufVxuXG4uYWN0aXZlX3F1ZXN0aW9uIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzc0MjRDICFpbXBvcnRhbnQ7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIHRyYW5zaXRpb246IC41cztcbn1cblxuLmN1czEge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vaW1hZ2VzL2N1czEucG5nJyk7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb250YWluO1xuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbi14OiBjZW50ZXI7XG59XG5cbi5hY3RpdmVQYWdlIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG5cbi5iaWdfdGV4dCB7XG4gICAgZm9udC1zaXplOiA0dnc7XG59XG5cbi5ub3JtYWxfdGV4dCB7XG4gICAgZm9udC1zaXplOiAxdnc7XG59XG5cbi5tZWRpdW1fdGV4dCB7XG4gICAgZm9udC1zaXplOiAxLjV2dztcbn1cblxuLnNlbWlfbGFyZ2VfdGV4dCB7XG4gICAgZm9udC1zaXplOiAydnc7XG59XG5cbi5sb2dvIHtcbiAgICBoZWlnaHQ6IDEwMHB4O1xuICAgIHdpZHRoOiAxNTBweDtcbn1cblxuLmN1c19jb3ZlciB7XG4gICAgaGVpZ2h0OiA2MDBweDtcbn1cblxuLmFkZC1jb2xvciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG4gICAgei1pbmRleDogMjtcbiAgICB0cmFuc2l0aW9uOiAuNXM7XG59XG5cblxuQGtleWZyYW1lcyBmYWRlIHtcbiAgICAwJSB7XG4gICAgICAgIG9wYWNpdHk6IDAuMztcbiAgICB9XG5cbiAgICAxMDAlIHtcbiAgICAgICAgb3BhY2l0eTogMTtcbiAgICB9XG59XG5cbi8qIEBrZXlmcmFtZXMgY2hhbmdlQW5nbGUge1xuICAgIDAlIHtcbiAgICAgICAgdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XG4gICAgfVxuICAgIDEwMCV7XG4gICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7XG4gICAgfVxufSAqL1xuXG4uY2hhbmdlLWFuZ2xle1xuICAgIHRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7XG4gICAgdHJhbnNpdGlvbjogLjVzO1xufVxuLnJldmVyc2UtYW5nbGV7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XG4gICAgdHJhbnNpdGlvbjogLjVzO1xufVxuXG4vKiAubXlmYWRlIHtcbiAgICBhbmltYXRpb24tbmFtZTogZmFkZTtcbiAgICBhbmltYXRpb24tZHVyYXRpb246IDAuNXM7XG59ICovXG5cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6NzY4cHgpIHtcbiAgICAubG9nbyB7XG4gICAgICAgIGhlaWdodDogNjVweDtcbiAgICAgICAgd2lkdGg6IDkwcHg7XG4gICAgfVxuXG4gICAgLyogLmJpZ190ZXh0IHtcbiAgICAgICAgZm9udC1zaXplOiAzMHB4O1xuICAgIH0gKi9cblxuICAgIC5xdWVzdGlvbiB7XG4gICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICB9XG5cbiAgICAuY3VzX2NvdmVyIHtcbiAgICAgICAgaGVpZ2h0OiAyMjBweDtcbiAgICB9XG59XG5cbkBtZWRpYSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDE0NDBweCl7XG4gICAgYm9keXtcbiAgICAgICAgd2lkdGg6IDE0NDBweDsgXG4gICAgICAgIC8qIGJvcmRlcjogMTBweCBzb2xpZCByZWQ7ICovXG4gICAgICAgIG1hcmdpbjogYXV0bztcbiAgICB9XG59XG5cbi5kcm9wZG93bi1jb250ZW50e1xuICAgIGRpc3BsYXk6IG5vbmU7XG59XG4uZHJvcGRvd25fbWVudTpob3ZlciAuZHJvcGRvd24tY29udGVudHtcbiAgICBkaXNwbGF5OiBibG9jaztcbn0iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>.home_sect_cover {
+    background-color: #F1F1F1;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+
+.curs {
+    cursor: pointer;
+}
+
+.identities div,
+.blur {
+    background: #ffffff72;
+}
+
+.pictures img:not(:first-child) {
+    margin-top: -7px;
+}
+
+.home_sect_with_bg {
+    background-image: url(http://localhost:3001/static/media/home_bg2.6325901742fb6ac0d767.webp);
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    /* background-position: center; */
+}
+
+.green_text {
+    color: #84BD3A;
+}
+
+.interests {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 30px;
+}
+
+.interests_reverse {
+    grid-template-columns: 4fr 6fr;
+}
+
+.interests>div {
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.interest_one {
+    background-image: url(http://localhost:3001/static/media/interest1.0d933bf7f125d8ca1720.png);
+}
+
+.interest_two {
+    background-image: url(http://localhost:3001/static/media/interest2.25c7267edc90d3d6140e.png);
+}
+
+.interest_three {
+    background-image: url(http://localhost:3001/static/media/interest3.83e5a75579a8b71b4039.png);
+}
+
+.interest_four {
+    background-image: url(http://localhost:3001/static/media/interest4.b3488b3895e729cb501c.png);
+}
+
+.interests_arrow_container {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.map{
+    height: 80vh;
+    width: 80vw;
+}
+.moveDown{
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+@keyframes showContent {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.show-content{
+    /* opacity: 0.3; */
+    /* display: block; */
+    animation-name: showContent;
+    animation-duration: .5s;
+}
+
+@media screen and (max-width:768px) {
+    .home_sect_with_bg{
+        background-size: cover;
+        background-position: top;
+        /* border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px; */
+        /* background-position-x: right; */
+    }
+    .interests{
+        grid-template-columns: 1fr;
+        gap: 30;
+    }
+    .interests>div{
+        height: 220px;
+    }
+    .map{
+        height: 200px;
+    }
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zdHlsZXMvaG9tZS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx5QkFBeUI7SUFDekIsNEJBQTRCO0lBQzVCLDZCQUE2QjtBQUNqQzs7O0FBR0E7SUFDSSxlQUFlO0FBQ25COztBQUVBOztJQUVJLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLHlEQUFnRDtJQUNoRCw4QkFBOEI7SUFDOUIsNEJBQTRCO0lBQzVCLGlDQUFpQztBQUNyQzs7QUFFQTtJQUNJLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsOEJBQThCO0lBQzlCLFNBQVM7QUFDYjs7QUFFQTtJQUNJLDhCQUE4QjtBQUNsQzs7QUFFQTtJQUNJLGFBQWE7SUFDYixzQkFBc0I7SUFDdEIsNEJBQTRCO0lBQzVCLFlBQVk7SUFDWixhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLDhCQUE4QjtBQUNsQzs7QUFFQTtJQUNJLHlEQUFnRDtBQUNwRDs7QUFFQTtJQUNJLHlEQUFnRDtBQUNwRDs7QUFFQTtJQUNJLHlEQUFnRDtBQUNwRDs7QUFFQTtJQUNJLHlEQUFnRDtBQUNwRDs7QUFFQTtJQUNJLHdCQUF3QjtJQUN4QixtQkFBbUI7SUFDbkIseUJBQXlCO0FBQzdCO0FBQ0E7SUFDSSxZQUFZO0lBQ1osV0FBVztBQUNmO0FBQ0E7SUFDSSxnQkFBZ0I7SUFDaEIsZ0JBQWdCO0FBQ3BCOztBQUVBO0lBQ0k7UUFDSSxZQUFZO0lBQ2hCO0lBQ0E7UUFDSSxVQUFVO0lBQ2Q7QUFDSjs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixvQkFBb0I7SUFDcEIsMkJBQTJCO0lBQzNCLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJO1FBQ0ksc0JBQXNCO1FBQ3RCLHdCQUF3QjtRQUN4QjsyQ0FDbUM7UUFDbkMsa0NBQWtDO0lBQ3RDO0lBQ0E7UUFDSSwwQkFBMEI7UUFDMUIsT0FBTztJQUNYO0lBQ0E7UUFDSSxhQUFhO0lBQ2pCO0lBQ0E7UUFDSSxhQUFhO0lBQ2pCO0FBQ0oiLCJzb3VyY2VzQ29udGVudCI6WyIuaG9tZV9zZWN0X2NvdmVyIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjRjFGMUYxO1xuICAgIGJvcmRlci10b3AtbGVmdC1yYWRpdXM6IDUwcHg7XG4gICAgYm9yZGVyLXRvcC1yaWdodC1yYWRpdXM6IDUwcHg7XG59XG5cblxuLmN1cnMge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLmlkZW50aXRpZXMgZGl2LFxuLmJsdXIge1xuICAgIGJhY2tncm91bmQ6ICNmZmZmZmY3Mjtcbn1cblxuLnBpY3R1cmVzIGltZzpub3QoOmZpcnN0LWNoaWxkKSB7XG4gICAgbWFyZ2luLXRvcDogLTdweDtcbn1cblxuLmhvbWVfc2VjdF93aXRoX2JnIHtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uL2ltYWdlcy9ob21lX2JnMi53ZWJwJyk7XG4gICAgLyogYmFja2dyb3VuZC1zaXplOiBjb250YWluOyAqL1xuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgLyogYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyOyAqL1xufVxuXG4uZ3JlZW5fdGV4dCB7XG4gICAgY29sb3I6ICM4NEJEM0E7XG59XG5cbi5pbnRlcmVzdHMge1xuICAgIGRpc3BsYXk6IGdyaWQ7XG4gICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiA1ZnIgNGZyO1xuICAgIGdhcDogMzBweDtcbn1cblxuLmludGVyZXN0c19yZXZlcnNlIHtcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDRmciA2ZnI7XG59XG5cbi5pbnRlcmVzdHM+ZGl2IHtcbiAgICBoZWlnaHQ6IDM1MHB4O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn1cblxuLmludGVyZXN0X29uZSB7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi9pbWFnZXMvaW50ZXJlc3QxLnBuZycpO1xufVxuXG4uaW50ZXJlc3RfdHdvIHtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uL2ltYWdlcy9pbnRlcmVzdDIucG5nJyk7XG59XG5cbi5pbnRlcmVzdF90aHJlZSB7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi9pbWFnZXMvaW50ZXJlc3QzLnBuZycpO1xufVxuXG4uaW50ZXJlc3RfZm91ciB7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi9pbWFnZXMvaW50ZXJlc3Q0LnBuZycpO1xufVxuXG4uaW50ZXJlc3RzX2Fycm93X2NvbnRhaW5lciB7XG4gICAgZGlzcGxheTogZmxleCAhaW1wb3J0YW50O1xuICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gICAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbn1cbi5tYXB7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xufVxuLm1vdmVEb3due1xuICAgIG1hcmdpbi10b3A6IDIwcHg7XG4gICAgdHJhbnNpdGlvbjogMC4zcztcbn1cblxuQGtleWZyYW1lcyBzaG93Q29udGVudCB7XG4gICAgZnJvbSB7XG4gICAgICAgIG9wYWNpdHk6IDAuMztcbiAgICB9XG4gICAgdG8ge1xuICAgICAgICBvcGFjaXR5OiAxO1xuICAgIH1cbn1cblxuLnNob3ctY29udGVudHtcbiAgICAvKiBvcGFjaXR5OiAwLjM7ICovXG4gICAgLyogZGlzcGxheTogYmxvY2s7ICovXG4gICAgYW5pbWF0aW9uLW5hbWU6IHNob3dDb250ZW50O1xuICAgIGFuaW1hdGlvbi1kdXJhdGlvbjogLjVzO1xufVxuXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOjc2OHB4KSB7XG4gICAgLmhvbWVfc2VjdF93aXRoX2Jne1xuICAgICAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICAgICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiB0b3A7XG4gICAgICAgIC8qIGJvcmRlci1ib3R0b20tbGVmdC1yYWRpdXM6IDUwcHg7XG4gICAgICAgIGJvcmRlci1ib3R0b20tcmlnaHQtcmFkaXVzOiA1MHB4OyAqL1xuICAgICAgICAvKiBiYWNrZ3JvdW5kLXBvc2l0aW9uLXg6IHJpZ2h0OyAqL1xuICAgIH1cbiAgICAuaW50ZXJlc3Rze1xuICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmcjtcbiAgICAgICAgZ2FwOiAzMDtcbiAgICB9XG4gICAgLmludGVyZXN0cz5kaXZ7XG4gICAgICAgIGhlaWdodDogMjIwcHg7XG4gICAgfVxuICAgIC5tYXB7XG4gICAgICAgIGhlaWdodDogMjAwcHg7XG4gICAgfVxufSJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.mvtr {
+    background-image: url(http://localhost:3001/static/media/mvtr2.7e5b6dd4d8cdb26eec7c.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.mission,
+.vision {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+.mission {
+    background-image: url(http://localhost:3001/static/media/mission2.ed5179925f75a2e189dc.png);
+}
+
+.vision {
+    background-image: url(http://localhost:3001/static/media/vision.77b88f4a04262a7edd8b.png);
+}
+
+.stakeholder {
+    background-image: url(http://localhost:3001/static/media/stakeholder.c95c141975f1f1a0436d.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stakeholder-text-body {
+    /* background-image: url('../images/stakeholder.jpeg'); */
+    background-position: center;
+    background-color: #000000b5;
+}
+
+.canvas {
+    background-image: url(http://localhost:3001/static/media/canvas.983d7b23ad123b420fab.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* opacity: 0.3; */
+}
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    top: 130;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    background-image: url(http://localhost:3001/static/media/canvas.983d7b23ad123b420fab.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: scaleY(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+.show{
+    animation-name: show;
+    animation-duration: 1s;
+}
+
+@media screen and (max-width:768px){
+    .mission, .vision{
+        height: 250px;
+    }
+    .overlay::before{
+        height: 830px;
+    }
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zdHlsZXMvYWJvdXQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0kseURBQTRDO0lBQzVDLDRCQUE0QjtJQUM1QixzQkFBc0I7SUFDdEIsMkJBQTJCO0FBQy9COztBQUVBOztJQUVJLDRCQUE0QjtJQUM1QixzQkFBc0I7SUFDdEIsMkJBQTJCO0lBQzNCLGFBQWE7QUFDakI7O0FBRUE7SUFDSSx5REFBK0M7QUFDbkQ7O0FBRUE7SUFDSSx5REFBNkM7QUFDakQ7O0FBRUE7SUFDSSx5REFBbUQ7SUFDbkQsNEJBQTRCO0lBQzVCLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLHlEQUF5RDtJQUN6RCwyQkFBMkI7SUFDM0IsMkJBQTJCO0FBQy9COztBQUVBO0lBQ0kseURBQThDO0lBQzlDLDRCQUE0QjtJQUM1QixzQkFBc0I7SUFDdEIsMkJBQTJCO0lBQzNCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsUUFBUTtJQUNSLE9BQU87SUFDUCxXQUFXO0lBQ1gsYUFBYTtJQUNiLHlEQUE4QztJQUM5QywyQkFBMkI7SUFDM0Isc0JBQXNCO0lBQ3RCLDRCQUE0QjtJQUM1QixZQUFZO0lBQ1osV0FBVztBQUNmOztBQUVBO0lBQ0k7UUFDSSxVQUFVO1FBQ1Ysc0JBQXNCO0lBQzFCO0lBQ0E7UUFDSSxVQUFVO1FBQ1Ysb0JBQW9CO0lBQ3hCO0FBQ0o7O0FBRUE7SUFDSSxvQkFBb0I7SUFDcEIsc0JBQXNCO0FBQzFCOztBQUVBO0lBQ0k7UUFDSSxhQUFhO0lBQ2pCO0lBQ0E7UUFDSSxhQUFhO0lBQ2pCO0FBQ0oiLCJzb3VyY2VzQ29udGVudCI6WyIubXZ0ciB7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi9pbWFnZXMvbXZ0cjIucG5nJyk7XG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbn1cblxuLm1pc3Npb24sXG4udmlzaW9uIHtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xuICAgIGhlaWdodDogMzAwcHg7XG59XG5cbi5taXNzaW9uIHtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uL2ltYWdlcy9taXNzaW9uMi5wbmcnKTtcbn1cblxuLnZpc2lvbiB7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi9pbWFnZXMvdmlzaW9uLnBuZycpO1xufVxuXG4uc3Rha2Vob2xkZXIge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vaW1hZ2VzL3N0YWtlaG9sZGVyLmpwZWcnKTtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG59XG5cbi5zdGFrZWhvbGRlci10ZXh0LWJvZHkge1xuICAgIC8qIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vaW1hZ2VzL3N0YWtlaG9sZGVyLmpwZWcnKTsgKi9cbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzAwMDAwMGI1O1xufVxuXG4uY2FudmFzIHtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uL2ltYWdlcy9jYW52YXMud2VicCcpO1xuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gICAgLyogb3BhY2l0eTogMC4zOyAqL1xufVxuXG4ub3ZlcmxheTo6YmVmb3JlIHtcbiAgICBjb250ZW50OiAnJztcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAxMzA7XG4gICAgbGVmdDogMDtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDcwMHB4O1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vaW1hZ2VzL2NhbnZhcy53ZWJwJyk7XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICBvcGFjaXR5OiAwLjI7XG4gICAgei1pbmRleDogLTE7XG59XG5cbkBrZXlmcmFtZXMgc2hvdyB7XG4gICAgZnJvbSB7XG4gICAgICAgIG9wYWNpdHk6IDA7XG4gICAgICAgIHRyYW5zZm9ybTogc2NhbGVZKDAuMyk7XG4gICAgfVxuICAgIHRvIHtcbiAgICAgICAgb3BhY2l0eTogMTtcbiAgICAgICAgdHJhbnNmb3JtOiBzY2FsZVkoMSk7XG4gICAgfVxufVxuXG4uc2hvd3tcbiAgICBhbmltYXRpb24tbmFtZTogc2hvdztcbiAgICBhbmltYXRpb24tZHVyYXRpb246IDFzO1xufVxuXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOjc2OHB4KXtcbiAgICAubWlzc2lvbiwgLnZpc2lvbntcbiAgICAgICAgaGVpZ2h0OiAyNTBweDtcbiAgICB9XG4gICAgLm92ZXJsYXk6OmJlZm9yZXtcbiAgICAgICAgaGVpZ2h0OiA4MzBweDtcbiAgICB9XG59Il0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>.wwdbi{
+    background-image: url(http://localhost:3001/static/media/wwdbi2.38854b7dd98ab7254a6f.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* width: 100%; */
+}
+.figures>div:not(:last-child){
+    border-right: 1px solid white;
+}
+.activeDetail{
+    transform: scale(1.1, 1.1);
+    transition: .5s;
+    /* box-shadow: 1px 1px 5px black; */
+}
+
+@keyframes anim {
+    0%{
+        transform: translate(-50px, -50px);
+        opacity: 0.3;
+        /* box-shadow: rgb(96, 93, 97) 0px 0px 0px 0px; */
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+        /* box-shadow: rgba(255, 224, 178, 0) 0px 0px 0px 80px; */
+    }
+}
+
+.anim {
+    animation-name: anim;
+    animation-duration: .3s;
+    -webkit-animation-timing-function: linear;
+    /* animation-direction: ; */
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zdHlsZXMvd2hhdHdlZG8uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0kseURBQThDO0lBQzlDLDRCQUE0QjtJQUM1QixzQkFBc0I7SUFDdEIsMkJBQTJCO0lBQzNCLGlCQUFpQjtBQUNyQjtBQUNBO0lBQ0ksNkJBQTZCO0FBQ2pDO0FBQ0E7SUFDSSwwQkFBMEI7SUFDMUIsZUFBZTtJQUNmLG1DQUFtQztBQUN2Qzs7QUFFQTtJQUNJO1FBQ0ksa0NBQWtDO1FBQ2xDLFlBQVk7UUFDWixpREFBaUQ7SUFDckQ7SUFDQTtRQUNJLHlCQUF5QjtRQUN6QixVQUFVO1FBQ1YseURBQXlEO0lBQzdEO0FBQ0o7O0FBRUE7SUFDSSxvQkFBb0I7SUFDcEIsdUJBQXVCO0lBQ3ZCLHlDQUF5QztJQUN6QywyQkFBMkI7QUFDL0IiLCJzb3VyY2VzQ29udGVudCI6WyIud3dkYml7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi9pbWFnZXMvd3dkYmkyLndlYnAnKTtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xuICAgIC8qIHdpZHRoOiAxMDAlOyAqL1xufVxuLmZpZ3VyZXM+ZGl2Om5vdCg6bGFzdC1jaGlsZCl7XG4gICAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgd2hpdGU7XG59XG4uYWN0aXZlRGV0YWlse1xuICAgIHRyYW5zZm9ybTogc2NhbGUoMS4xLCAxLjEpO1xuICAgIHRyYW5zaXRpb246IC41cztcbiAgICAvKiBib3gtc2hhZG93OiAxcHggMXB4IDVweCBibGFjazsgKi9cbn1cblxuQGtleWZyYW1lcyBhbmltIHtcbiAgICAwJXtcbiAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwcHgsIC01MHB4KTtcbiAgICAgICAgb3BhY2l0eTogMC4zO1xuICAgICAgICAvKiBib3gtc2hhZG93OiByZ2IoOTYsIDkzLCA5NykgMHB4IDBweCAwcHggMHB4OyAqL1xuICAgIH1cbiAgICAxMDAle1xuICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgwcHgpO1xuICAgICAgICBvcGFjaXR5OiAxO1xuICAgICAgICAvKiBib3gtc2hhZG93OiByZ2JhKDI1NSwgMjI0LCAxNzgsIDApIDBweCAwcHggMHB4IDgwcHg7ICovXG4gICAgfVxufVxuXG4uYW5pbSB7XG4gICAgYW5pbWF0aW9uLW5hbWU6IGFuaW07XG4gICAgYW5pbWF0aW9uLWR1cmF0aW9uOiAuM3M7XG4gICAgLXdlYmtpdC1hbmltYXRpb24tdGltaW5nLWZ1bmN0aW9uOiBsaW5lYXI7XG4gICAgLyogYW5pbWF0aW9uLWRpcmVjdGlvbjogOyAqL1xufSJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.landscape{
+    background-image: url(http://localhost:3001/static/media/landscape.744025045ce181da48bf.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 830px;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zdHlsZXMvbmV3cy5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx5REFBaUQ7SUFDakQsNEJBQTRCO0lBQzVCLHNCQUFzQjtJQUN0QiwyQkFBMkI7SUFDM0IsYUFBYTtBQUNqQiIsInNvdXJjZXNDb250ZW50IjpbIi5sYW5kc2NhcGV7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi9pbWFnZXMvbGFuZHNjYXBlLmpwZWcnKTtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xuICAgIGhlaWdodDogODMwcHg7XG59Il0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>.secbg{
+    background-image: url(http://localhost:3001/static/media/secbg.f4bfd76f4988027de71d.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+.thirdbg{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.small{
+    font-size: 12px;
+}
+.move-right{
+    transform: translateX(100px);
+    z-index: 1;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zdHlsZXMvY29udGFjdC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx5REFBNEM7SUFDNUMsMkJBQTJCO0lBQzNCLDRCQUE0QjtJQUM1QixzQkFBc0I7SUFDdEIsNkJBQTZCO0lBQzdCLGdDQUFnQztBQUNwQztBQUNBO0lBQ0ksMENBQTBDO0FBQzlDO0FBQ0E7SUFDSSxlQUFlO0FBQ25CO0FBQ0E7SUFDSSw0QkFBNEI7SUFDNUIsVUFBVTtBQUNkIiwic291cmNlc0NvbnRlbnQiOlsiLnNlY2Jne1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vaW1hZ2VzL3NlY2JnLnBuZycpO1xuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgYm9yZGVyLXRvcC1sZWZ0LXJhZGl1czogMTAwcHg7XG4gICAgYm9yZGVyLWJvdHRvbS1sZWZ0LXJhZGl1czogMTAwcHg7XG59XG4udGhpcmRiZ3tcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuOCk7XG59XG4uc21hbGx7XG4gICAgZm9udC1zaXplOiAxMnB4O1xufVxuLm1vdmUtcmlnaHR7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDEwMHB4KTtcbiAgICB6LWluZGV4OiAxO1xufSJdLCJzb3VyY2VSb290IjoiIn0= */</style></head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"><div class="myfade"><nav class="text-white d-flex flex-row align-items-center justify-content-between px-3 px-lg-5 w-100 position-relative false" style="height: 130px; z-index: 100;"><div><img src="./React App_files/logo2.6516e37ed5cc7158f005.png" alt="PrimeCarbon Logo" class="curs logo"></div><div class="d-flex flex-row nav_links manrope_regular d-none d-md-flex"><div class="false rounded-pill">Home</div><div class="activePage rounded-pill">About Us</div><div class="false rounded-pill">What We Do</div><div class="false rounded-pill">Our Projects</div><div class="false rounded-pill">Publications</div><div class="false rounded-pill">Contact Us</div></div><div class="d-md-none curs"><svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="dropdown_menu position-relative mb-3"><path d="M2.33337 19.3334H25.6667M2.33337 11.0001H25.6667M2.33337 2.66675H25.6667" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg><div class="dropdown-content position-absolute p-2 bg-secondary" style="display: none; right: 0px; width: 160px;"><div class="false mb-2 p-1">Home</div><div class="activePage mb-2 p-1">About Us</div><div class="false mb-2 p-1">What We Do</div><div class="false mb-2 p-1">Our Projects</div><div class="false mb-2 p-1">Publications</div><div class="false mb-2 p-1">Contact Us</div></div></div></nav><div class="" style="height: 830px;margin-top: -130px;"><div class="overlay w-100 h-100 d-flex flex-column flex-lg-row" style="z-index: 1; height: 830px;"><div class="w-100 h-100 order-2 order-lg-1" style="background-image: url(&quot;/static/media/abc2.3e1165998750116ad295.webp&quot;); background-repeat: no-repeat; background-size: cover; background-position: center center;"></div><div class="w-100 order-1 order-lg-2 d-flex flex-column"><div class="p-5 h-75 d-flex flex-column justify-content-center"><h1 class="felix_regular big_text">Who is Prime Carbon?</h1><p class="mulish_regular small_text" style="color: rgb(82, 82, 82);">Prime Carbon is a project generation company dedicated to sustainable solutions in the carbon footprint sector, with a strong emphasis on Corporate Social Responsibility (CSR). Our deep personal commitment extends to both the environment and the communities we serve, as many of our team members have grown up in developing countries and have witnessed the environmental and social challenges these regions face. While we have excelled in our respective fields, our true goal is to become better stewards of the environment and contribute to the sustainable growth and empowerment of local communities.</p></div></div></div></div><div class="px-4"><div class="p-5" style="background-color: rgb(241, 241, 241);"><div class="my-5"><h1 class="felix_regular text-center" style="color: rgb(16, 24, 40); font-size: 50px;">Why Choose Us?</h1><div class="d-flex flex-row justify-content-between col-12 mt-5"><div class="h-100 col-8"><div class="d-flex flex-row col-10 mb-2"><div><h4 class="felix_regular" style="color: rgb(16, 24, 40);">Integrated Approach</h4><p class="" style="color: rgb(82, 82, 82); font-size: 12px;">We combine traditional conservation efforts with a forward-looking vision for integrating innovative technologies like BioChar and advanced carbon capture. While we are in the process of expanding these capabilities, our commitment to offering holistic and sustainable environmental solutions remains unwavering.</p></div></div><div class="d-flex flex-row col-10 mb-2"><div><h4 class="felix_regular" style="color: rgb(16, 24, 40);">Global Reach</h4><p class="" style="color: rgb(82, 82, 82); font-size: 12px;">While we operate on a global scale, we tailor our projects to address local environmental and social issues, ensuring meaningful impact at the grassroots level. Our international team, representing diverse continents, allows us to have an extensive reach. Our deep understanding and appreciation of different cultures make us stand out, enabling genuine local impact in every project we undertake.</p></div></div><div class="d-flex flex-row col-10 mb-2"><div><h4 class="felix_regular" style="color: rgb(16, 24, 40);">Community Collaboration</h4><p class="" style="color: rgb(82, 82, 82); font-size: 12px;">We work closely with local communities to ensure that our projects benefit both the environment and the people who depend on it. Our commitment to Corporate Social Responsibility (CSR) is integral to every project, ensuring alignment with broader social and environmental goals, thus making a comprehensive positive impact.</p></div></div><div class="d-flex flex-row col-10 mb-2"><div><h4 class="felix_regular" style="color: rgb(16, 24, 40);">Advanced Technologies</h4><p class="" style="color: rgb(82, 82, 82); font-size: 12px;">By leveraging cutting-edge technologies, we enhance the efficiency and sustainability of our conservation efforts. This commitment to innovation sets us apart in the industry, ensuring our projects are both forward-thinking and impactful.</p></div></div><div class="d-flex flex-row col-10 mb-2"><div><h4 class="felix_regular" style="color: rgb(16, 24, 40);">Commitment to Transparency</h4><p class="" style="color: rgb(82, 82, 82); font-size: 12px;">We prioritize openness and accountability in everything we do. From every pencil to every tree, and every resource in between, we meticulously account for everything, providing complete clarity to our stakeholders. Our transparency ensures that all involved are informed and engaged in our sustainability journey.</p></div></div></div><div class="mvtr rounded-3 col-3 my-auto" style="height: 500px;"></div></div></div><div class=""><div class="col-12 d-flex flex-column flex-md-row justify-content-around py-5 text-white flex-wrap"><div class="col-11 mx-auto mx-md-0 col-lg-5 rounded-4 mission p-4 d-flex flex-column justify-content-end my-2 my-lg-0"><h1 class="felix_regular ps-3 d-none ">Mission</h1><div class="blur rounded-4 p-3 show-content"><h1 class="bricolage_bold">Mission</h1><p class="manrope_semibold">Prime Carbon generates sustainable projects focused on reducing carbon footprints, primarily within the voluntary carbon market, with a strong commitment to CSR</p></div></div><div class="col-11 mx-auto mx-md-0 col-lg-5 rounded-4 vision p-4 d-flex flex-column justify-content-end my-2 my-lg-0"><h1 class="felix_regular ps-3 d-none ">Vision</h1><div class="blur rounded-4 p-3 show-content"><h1 class="bricolage_bold">Vision</h1><p class="manrope_semibold">To be global leaders in sustainable invetsments, driving impactful change and inspiring commitment to environmental stewardship</p></div></div></div></div><div class="my-5 d-flex flex-column align-items-center p-5"><h1 class="felix_regular" style="color: rgb(7, 38, 14); font-size: 50px;">Our Values</h1><p style="color: rgb(90, 113, 132);">We strive to redefine the standard of excellence.</p><div class="col-8 my-5 text-center"><img src="./React App_files/values2.bd4dc72d550e8102fcb4.png" height="auto" width="700px" alt="values"></div></div><div class="my-5 py-5"><h1 class="felix_regular text-center semi_large_text" style="color: rgb(30, 58, 95);">Board of Directors</h1><div class="my-3 col-12 d-flex flex-row overflow-x-scroll"><div class="border col-3 rounded-4 stakeholder p-3 d-flex flex-column justify-content-end mx-3" style="height: 400px;"><div class="rounded-4 text-center text-white false stakeholder-text-body pt-2"><div class="d-block"><h3 class="felix_regular">Jason Umar</h3><p class="manrope_semibold">CE0/Co-founder</p></div><div class="d-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, elit nec consequat aliquam, odio turpis varius velit, nec tincidunt purus erat nec nisi. Proin vitae tellus ac metus facilisis malesuada. Integer nec purus non eros efficitur volutpat. Cras euismod nulla eu risus sagittis, at cursus eros suscipit. Vivamus in velit risus. Duis facilisis vehicula lectus a euismod.</div></div></div><div class="border col-3 rounded-4 stakeholder p-3 d-flex flex-column justify-content-end mx-3" style="height: 400px;"><div class="rounded-4 text-center text-white false stakeholder-text-body pt-2"><div class="d-block"><h3 class="felix_regular">Jason Umar</h3><p class="manrope_semibold">CE0/Co-founder</p></div><div class="d-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, elit nec consequat aliquam, odio turpis varius velit, nec tincidunt purus erat nec nisi. Proin vitae tellus ac metus facilisis malesuada. Integer nec purus non eros efficitur volutpat. Cras euismod nulla eu risus sagittis, at cursus eros suscipit. Vivamus in velit risus. Duis facilisis vehicula lectus a euismod.</div></div></div><div class="border col-3 rounded-4 stakeholder p-3 d-flex flex-column justify-content-end mx-3" style="height: 400px;"><div class="rounded-4 text-center text-white false stakeholder-text-body pt-2"><div class="d-block"><h3 class="felix_regular">Jason Umar</h3><p class="manrope_semibold">CE0/Co-founder</p></div><div class="d-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, elit nec consequat aliquam, odio turpis varius velit, nec tincidunt purus erat nec nisi. Proin vitae tellus ac metus facilisis malesuada. Integer nec purus non eros efficitur volutpat. Cras euismod nulla eu risus sagittis, at cursus eros suscipit. Vivamus in velit risus. Duis facilisis vehicula lectus a euismod.</div></div></div><div class="border col-3 rounded-4 stakeholder p-3 d-flex flex-column justify-content-end mx-3" style="height: 400px;"><div class="rounded-4 text-center text-white false stakeholder-text-body pt-2"><div class="d-block"><h3 class="felix_regular">Jason Umar</h3><p class="manrope_semibold">CE0/Co-founder</p></div><div class="d-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, elit nec consequat aliquam, odio turpis varius velit, nec tincidunt purus erat nec nisi. Proin vitae tellus ac metus facilisis malesuada. Integer nec purus non eros efficitur volutpat. Cras euismod nulla eu risus sagittis, at cursus eros suscipit. Vivamus in velit risus. Duis facilisis vehicula lectus a euismod.</div></div></div><div class="border col-3 rounded-4 stakeholder p-3 d-flex flex-column justify-content-end mx-3" style="height: 400px;"><div class="rounded-4 text-center text-white false stakeholder-text-body pt-2"><div class="d-block"><h3 class="felix_regular">Jason Umar</h3><p class="manrope_semibold">CE0/Co-founder</p></div><div class="d-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, elit nec consequat aliquam, odio turpis varius velit, nec tincidunt purus erat nec nisi. Proin vitae tellus ac metus facilisis malesuada. Integer nec purus non eros efficitur volutpat. Cras euismod nulla eu risus sagittis, at cursus eros suscipit. Vivamus in velit risus. Duis facilisis vehicula lectus a euismod.</div></div></div></div></div><div class="my-5 py-5"><h1 class="felix_regular text-center semi_large_text" style="color: rgb(30, 58, 95);">Management Team</h1><div class="my-3 col-12 d-flex flex-row overflow-x-scroll"><div class="border col-3 rounded-4 stakeholder p-3 d-flex flex-column justify-content-end mx-3" style="height: 400px;"><div class="rounded-4 text-center text-white false stakeholder-text-body pt-2"><div class="d-block"><h3 class="felix_regular">Jason Umar</h3><p class="manrope_semibold">CE0/Co-founder</p></div><div class="d-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, elit nec consequat aliquam, odio turpis varius velit, nec tincidunt purus erat nec nisi. Proin vitae tellus ac metus facilisis malesuada. Integer nec purus non eros efficitur volutpat. Cras euismod nulla eu risus sagittis, at cursus eros suscipit. Vivamus in velit risus. Duis facilisis vehicula lectus a euismod.</div></div></div><div class="border col-3 rounded-4 stakeholder p-3 d-flex flex-column justify-content-end mx-3" style="height: 400px;"><div class="rounded-4 text-center text-white false stakeholder-text-body pt-2"><div class="d-block"><h3 class="felix_regular">Jason Umar</h3><p class="manrope_semibold">CE0/Co-founder</p></div><div class="d-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, elit nec consequat aliquam, odio turpis varius velit, nec tincidunt purus erat nec nisi. Proin vitae tellus ac metus facilisis malesuada. Integer nec purus non eros efficitur volutpat. Cras euismod nulla eu risus sagittis, at cursus eros suscipit. Vivamus in velit risus. Duis facilisis vehicula lectus a euismod.</div></div></div><div class="border col-3 rounded-4 stakeholder p-3 d-flex flex-column justify-content-end mx-3" style="height: 400px;"><div class="rounded-4 text-center text-white false stakeholder-text-body pt-2"><div class="d-block"><h3 class="felix_regular">Jason Umar</h3><p class="manrope_semibold">CE0/Co-founder</p></div><div class="d-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, elit nec consequat aliquam, odio turpis varius velit, nec tincidunt purus erat nec nisi. Proin vitae tellus ac metus facilisis malesuada. Integer nec purus non eros efficitur volutpat. Cras euismod nulla eu risus sagittis, at cursus eros suscipit. Vivamus in velit risus. Duis facilisis vehicula lectus a euismod.</div></div></div><div class="border col-3 rounded-4 stakeholder p-3 d-flex flex-column justify-content-end mx-3" style="height: 400px;"><div class="rounded-4 text-center text-white false stakeholder-text-body pt-2"><div class="d-block"><h3 class="felix_regular">Jason Umar</h3><p class="manrope_semibold">CE0/Co-founder</p></div><div class="d-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, elit nec consequat aliquam, odio turpis varius velit, nec tincidunt purus erat nec nisi. Proin vitae tellus ac metus facilisis malesuada. Integer nec purus non eros efficitur volutpat. Cras euismod nulla eu risus sagittis, at cursus eros suscipit. Vivamus in velit risus. Duis facilisis vehicula lectus a euismod.</div></div></div><div class="border col-3 rounded-4 stakeholder p-3 d-flex flex-column justify-content-end mx-3" style="height: 400px;"><div class="rounded-4 text-center text-white false stakeholder-text-body pt-2"><div class="d-block"><h3 class="felix_regular">Jason Umar</h3><p class="manrope_semibold">CE0/Co-founder</p></div><div class="d-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, elit nec consequat aliquam, odio turpis varius velit, nec tincidunt purus erat nec nisi. Proin vitae tellus ac metus facilisis malesuada. Integer nec purus non eros efficitur volutpat. Cras euismod nulla eu risus sagittis, at cursus eros suscipit. Vivamus in velit risus. Duis facilisis vehicula lectus a euismod.</div></div></div></div></div></div></div><div class="my-5 p-3 p-md-5 col-12  mx-auto"><div class="text-center"><h1 class="felix_regular">Frequently Asked Questions</h1><p class="manrope_regular" style="font-size: 12px; color: rgb(82, 82, 82);">Got Questions? Find the answers you need here! Explore to learn more about our commitment to sustainability and how we’re working to make a difference.</p></div><div class="mt-5"><div class="rounded-2 p-3 p-md-3 bg-white mb-3 border d-flex flex-row justify-content-between align-items-center curs false question col-12 col-md-8 mx-auto"><div class="col-10"><div class="manrope_light">Do you specialize in both residential and commercial landscaping?</div></div><div><svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="reverse-angle"><path d="M13.1671 1.25345L8.0676 6.35297L2.96808 1.25345C2.4555 0.740873 1.62748 0.740873 1.1149 1.25345C0.602324 1.76603 0.602324 2.59405 1.1149 3.10663L7.14758 9.13931C7.66016 9.65189 8.48818 9.65189 9.00076 9.13931L15.0334 3.10663C15.546 2.59405 15.546 1.76603 15.0334 1.25345C14.5209 0.754017 13.6797 0.740873 13.1671 1.25345Z" fill="#232A42"></path></svg></div></div><div class="rounded-2 p-3 p-md-3 bg-white mb-3 border d-flex flex-row justify-content-between align-items-center curs false question col-12 col-md-8 mx-auto"><div class="col-10"><div class="manrope_light">Do you provide sustainable and eco-friendly landscaping options?</div></div><div><svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="reverse-angle"><path d="M13.1671 1.25345L8.0676 6.35297L2.96808 1.25345C2.4555 0.740873 1.62748 0.740873 1.1149 1.25345C0.602324 1.76603 0.602324 2.59405 1.1149 3.10663L7.14758 9.13931C7.66016 9.65189 8.48818 9.65189 9.00076 9.13931L15.0334 3.10663C15.546 2.59405 15.546 1.76603 15.0334 1.25345C14.5209 0.754017 13.6797 0.740873 13.1671 1.25345Z" fill="#232A42"></path></svg></div></div><div class="rounded-2 p-3 p-md-3 bg-white mb-3 border d-flex flex-row justify-content-between align-items-center curs false question col-12 col-md-8 mx-auto"><div class="col-10"><div class="manrope_light"> How do I request a consultation or estimate for my landscaping project?</div></div><div><svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="reverse-angle"><path d="M13.1671 1.25345L8.0676 6.35297L2.96808 1.25345C2.4555 0.740873 1.62748 0.740873 1.1149 1.25345C0.602324 1.76603 0.602324 2.59405 1.1149 3.10663L7.14758 9.13931C7.66016 9.65189 8.48818 9.65189 9.00076 9.13931L15.0334 3.10663C15.546 2.59405 15.546 1.76603 15.0334 1.25345C14.5209 0.754017 13.6797 0.740873 13.1671 1.25345Z" fill="#232A42"></path></svg></div></div><div class="rounded-2 p-3 p-md-3 bg-white mb-3 border d-flex flex-row justify-content-between align-items-center curs false question col-12 col-md-8 mx-auto"><div class="col-10"><div class="manrope_light">What factors influence the cost of a landscaping project?</div></div><div><svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="reverse-angle"><path d="M13.1671 1.25345L8.0676 6.35297L2.96808 1.25345C2.4555 0.740873 1.62748 0.740873 1.1149 1.25345C0.602324 1.76603 0.602324 2.59405 1.1149 3.10663L7.14758 9.13931C7.66016 9.65189 8.48818 9.65189 9.00076 9.13931L15.0334 3.10663C15.546 2.59405 15.546 1.76603 15.0334 1.25345C14.5209 0.754017 13.6797 0.740873 13.1671 1.25345Z" fill="#232A42"></path></svg></div></div><div class="rounded-2 p-3 p-md-3 bg-white mb-3 border d-flex flex-row justify-content-between align-items-center curs false question col-12 col-md-8 mx-auto"><div class="col-10"><div class="manrope_light">How often should I schedule landscape maintenance services?</div></div><div><svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="reverse-angle"><path d="M13.1671 1.25345L8.0676 6.35297L2.96808 1.25345C2.4555 0.740873 1.62748 0.740873 1.1149 1.25345C0.602324 1.76603 0.602324 2.59405 1.1149 3.10663L7.14758 9.13931C7.66016 9.65189 8.48818 9.65189 9.00076 9.13931L15.0334 3.10663C15.546 2.59405 15.546 1.76603 15.0334 1.25345C14.5209 0.754017 13.6797 0.740873 13.1671 1.25345Z" fill="#232A42"></path></svg></div></div></div></div><div class="px-0 px-md-4 d-none d-md-block"><div class="p-5" style="background-color: rgb(241, 241, 241);"></div></div><nav class="footer_nav d-flex flex-column flex-lg-row p-3 p-md-5 justify-content-between flex-wrap" style="background-color: rgb(249, 249, 249); color: rgb(55, 66, 76);"><div class="col-12 col-md-6 col-lg-3 px-3 order-1 order-md-1"><h2 class="felix_regular">Prime Carbon</h2><div class="manrope_regular">Creating significant social &amp; environmental impacts through a combination of traditional conservation efforts and cutting-edge technologies.</div><div class="d-flex flex-row justify-content-between col-8 my-2"><svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="black"></rect><path d="M31 11.0101C31 11.0101 28.982 12.2021 27.86 12.5401C27.2577 11.8476 26.4573 11.3567 25.567 11.134C24.6767 10.9112 23.7395 10.9673 22.8821 11.2945C22.0247 11.6218 21.2884 12.2045 20.773 12.9638C20.2575 13.7231 19.9877 14.6224 20 15.5401V16.5401C18.2426 16.5856 16.5013 16.1959 14.931 15.4055C13.3607 14.6151 12.0103 13.4487 11 12.0101C11 12.0101 7 21.0101 16 25.0101C13.9405 26.408 11.4872 27.109 9 27.0101C18 32.0101 29 27.0101 29 15.5101C29 15.2321 28.972 14.9541 28.92 14.6801C29.94 13.6741 31 11.0101 31 11.0101Z" stroke="#2FB95D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="39" height="39" rx="7.5" stroke="#37424C"></rect><path d="M20 24C21.0609 24 22.0783 23.5786 22.8284 22.8284C23.5786 22.0783 24 21.0609 24 20C24 18.9391 23.5786 17.9217 22.8284 17.1716C22.0783 16.4214 21.0609 16 20 16C18.9391 16 17.9217 16.4214 17.1716 17.1716C16.4214 17.9217 16 18.9391 16 20C16 21.0609 16.4214 22.0783 17.1716 22.8284C17.9217 23.5786 18.9391 24 20 24V24Z" stroke="#37424C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 24V16C11 14.6739 11.5268 13.4021 12.4645 12.4645C13.4021 11.5268 14.6739 11 16 11H24C25.3261 11 26.5979 11.5268 27.5355 12.4645C28.4732 13.4021 29 14.6739 29 16V24C29 25.3261 28.4732 26.5979 27.5355 27.5355C26.5979 28.4732 25.3261 29 24 29H16C14.6739 29 13.4021 28.4732 12.4645 27.5355C11.5268 26.5979 11 25.3261 11 24Z" stroke="#37424C" stroke-width="1.5"></path><path d="M25.5 14.51L25.51 14.499" stroke="#37424C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="39" height="39" rx="7.5" stroke="#37424C"></rect><path d="M25 10H22C20.6739 10 19.4021 10.5268 18.4645 11.4645C17.5268 12.4021 17 13.6739 17 15V18H14V22H17V30H21V22H24L25 18H21V15C21 14.7348 21.1054 14.4804 21.2929 14.2929C21.4804 14.1054 21.7348 14 22 14H25V10Z" stroke="#37424C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="39" height="39" rx="7.5" stroke="#37424C"></rect><path d="M22 20L18.5 22V18L22 20Z" fill="#37424C" stroke="#37424C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 20.707V19.292C10 16.397 10 14.949 10.905 14.018C11.811 13.086 13.237 13.046 16.088 12.965C17.438 12.927 18.818 12.9 20 12.9C21.181 12.9 22.561 12.927 23.912 12.965C26.763 13.046 28.189 13.086 29.094 14.018C30 14.949 30 16.398 30 19.292V20.707C30 23.603 30 25.05 29.095 25.982C28.189 26.913 26.764 26.954 23.912 27.034C22.562 27.073 21.182 27.1 20 27.1C18.6958 27.0961 17.3916 27.0741 16.088 27.034C13.237 26.954 11.811 26.914 10.905 25.982C10 25.05 10 23.602 10 20.708V20.707Z" stroke="#37424C" stroke-width="1.5"></path></svg></div></div><div class="col-12 col-md-6 col-lg-3 px-3 order-2 order-md-2 my-3 my-md-0"><h5 class="felix_regular mb-3">Quick Links</h5><div class="manrope_regular"><div class="my-2">About Us</div><div class="my-2">Projects</div><div class="my-2">What We Do</div><div class="my-2">News/Blog</div></div></div><div class="col-12 col-md-6 col-lg-3 px-3 order-3 order-md-3 my-3 my-md-0"><h5 class="felix_regular mb-3">Contact Us</h5><div class="manrope_regular"><div class="my-2 d-flex flex-row align-items-center"><svg width="14" height="14" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.3335 0.666626H1.66683C0.933496 0.666626 0.340163 1.26663 0.340163 1.99996L0.333496 9.99996C0.333496 10.7333 0.933496 11.3333 1.66683 11.3333H12.3335C13.0668 11.3333 13.6668 10.7333 13.6668 9.99996V1.99996C13.6668 1.26663 13.0668 0.666626 12.3335 0.666626ZM12.0668 3.49996L7.3535 6.44663C7.14016 6.57996 6.86016 6.57996 6.64683 6.44663L1.9335 3.49996C1.76683 3.39329 1.66683 3.21329 1.66683 3.01996C1.66683 2.57329 2.1535 2.30663 2.5335 2.53996L7.00016 5.33329L11.4668 2.53996C11.8468 2.30663 12.3335 2.57329 12.3335 3.01996C12.3335 3.21329 12.2335 3.39329 12.0668 3.49996Z" fill="#37424C"></path></svg><span class="ms-2">hello@website.com</span></div><div class="my-2 d-flex flex-row align-items-center"><svg width="14" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.00016 0.333374C2.42016 0.333374 0.333496 2.42004 0.333496 5.00004C0.333496 7.78004 3.28016 11.6134 4.4935 13.0734C4.76016 13.3934 5.24683 13.3934 5.5135 13.0734C6.72016 11.6134 9.66683 7.78004 9.66683 5.00004C9.66683 2.42004 7.58016 0.333374 5.00016 0.333374ZM5.00016 6.66671C4.08016 6.66671 3.3335 5.92004 3.3335 5.00004C3.3335 4.08004 4.08016 3.33337 5.00016 3.33337C5.92016 3.33337 6.66683 4.08004 6.66683 5.00004C6.66683 5.92004 5.92016 6.66671 5.00016 6.66671Z" fill="#37424C"></path></svg><span class="ms-2">Riverside Building, County Hall, London SE1 7PB, United Kingdom</span></div><div class="my-2 d-flex flex-row align-items-center"><svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.82 8.17314L9.12669 7.9798C8.72003 7.93314 8.32003 8.07314 8.03336 8.3598L6.80669 9.58647C4.92003 8.62647 3.37336 7.08647 2.41336 5.19314L3.64669 3.9598C3.93336 3.67314 4.07336 3.27314 4.02669 2.86647L3.83336 1.18647C3.75336 0.513137 3.18669 0.00646973 2.50669 0.00646973H1.35336C0.600027 0.00646973 -0.0266396 0.633136 0.0200271 1.38647C0.37336 7.0798 4.92669 11.6265 10.6134 11.9798C11.3667 12.0265 11.9934 11.3998 11.9934 10.6465V9.49314C12 8.8198 11.4934 8.25314 10.82 8.17314Z" fill="#37424C"></path></svg><span class="ms-2">451-484-5939</span></div></div></div><div class="col-12 col-md-6 col-lg-3 px-3 order-4 order-md-4 my-3 my-md-0"><h5 class="felix_regular mb-3">Newsletter</h5><div class="input-group input-group-lg manrope_regular"><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Enter your email" style="font-size: 15px;"><span class="input-group-text bricolage_semibold bg-dark text-white" id="inputGroup-sizing-lg" style="border: none;">Subscribe</span></div></div></nav></div></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+
+</body></html>

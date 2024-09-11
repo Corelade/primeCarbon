@@ -3,6 +3,7 @@ import '../styles/home.css';
 import { useState } from "react";
 import ourp1 from '../images/ourp1.png';
 import map from '../images/map.png';
+import { useMediaQuery } from 'react-responsive';
 
 
 export default function Home() {
@@ -15,10 +16,10 @@ export default function Home() {
                 <div className="h-100" style={{ marginTop: '-130px' }}>
                     <div>
                         <div className="home_sect_with_bg text-white d-flex flex-column justify-content-between" style={{ height: "830px" }}>
-                            <div className="flex-column justify-content-around px-3 d-none d-lg-flex" style={{ height: '100%' }}>
+                            <div className="flex-column justify-content-around px-3 d-flex" style={{ height: '100%' }}>
                                 <div className="" style={{ height: '' }}></div>
                                 <div className="">
-                                    <h1 className="text-center felix_regular big_text">Empowering a Sustainable Future</h1>
+                                    <h1 className="text-center felix_regular" style={{fontSize:'45px'}}>Empowering a Sustainable Future</h1>
                                 </div>
                                 <div className="d-flex flex-row justify-content-center">
                                     <div className="border rounded-circle d-flex flex-row align-items-center justify-content-center bg-white" style={{ width: '70px', height: '70px', cursor: 'pointer' }} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
@@ -30,15 +31,15 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="px-4">
+                    <div className="px-0 px-md-4">
                         <div style={{ backgroundColor: '#F1F1F1' }} className="py-5">
-                            <div className="my-5">
-                                <div className="p-5 d-flex flex-row justify-content-center">
-                                    <div className="col-8">
-                                        <h1 className="felix_regular big_text text-center" style={{ color: '#101828' }}>Welcome to Prime Carbon</h1>
-                                        <p className="manrope_regular text-center my-5 normal_text" style={{ color: '#475467' }}>Founded in 2024, We are a sustainability-focused company dedicated to preserving our planet through innovative environmental solutions. We specialize in carbon sequestration, afforestation, and reforestation initiatives, along with the development of clean energy solutions, including wind and solar power, carbon capture, and energy storage.</p>
+                            <div className="my-0 my-md-5">
+                                <div className="p-0 p-md-5 d-flex flex-row justify-content-center">
+                                    <div className="col-10 col-md-8">
+                                        <h1 className="felix_regular text-center" style={{ color: '#101828', fontSize:'30px' }}>Welcome to Prime Carbon</h1>
+                                        <p className="manrope_regular text-center my-5" style={{ color: '#475467' }}>Founded in 2024, We are a sustainability-focused company dedicated to preserving our planet through innovative environmental solutions. We specialize in carbon sequestration, afforestation, and reforestation initiatives, along with the development of clean energy solutions, including wind and solar power, carbon capture, and energy storage.</p>
                                         <div className="d-flex flex-column align-items-center">
-                                            <div className="medium_text">
+                                            <div className="">
                                                 <div>
                                                     <span className="green_text akazan_bold" style={{ letterSpacing: '0.5vw' }}>01/ </span>
                                                     <b className="felix_regular ms-1" style={{ color: '#101828' }}> Carbon Sequestration</b>
@@ -61,7 +62,7 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <MissionVision />
-                                <div className="my-5 p-3" style={{ backgroundColor: '#F1F1F1' }}>
+                                <div className="my-0 my-md-5 p-3" style={{ backgroundColor: '#F1F1F1' }}>
                                     <div className="d-flex flex-column flex-md-row justify-content-evenly align-items-center py-5">
                                         <div className="col-12 col-md-3 text-center">
                                             <h1 className="felix_regular" style={{ color: '#1E3A5F' }}>+14,000,000</h1>
@@ -112,25 +113,26 @@ export function ExploreProjectButton(props) {
 export function MissionVision() {
 
     const [activeBox, setActiveBox] = useState(0);
+    const isMobile = useMediaQuery({ maxWidth: 768 });
 
     return (
         <div className="">
             <div className="col-12 d-flex flex-column flex-md-row justify-content-around py-5 text-white flex-wrap">
-                <div className="col-8 mx-auto mx-md-0 col-lg-5 rounded-4 mission p-4 d-flex flex-column justify-content-end my-2 my-lg-0" onMouseEnter={() => setActiveBox(1)} onMouseLeave={() => setActiveBox(0)}>
+                <div className="col-11 mx-auto mx-md-0 col-lg-5 rounded-4 mission p-4 d-flex flex-column justify-content-end my-2 my-lg-0" onMouseEnter={() => setActiveBox(1)} onMouseLeave={() => setActiveBox(0)}>
 
-                    <h1 className={`felix_regular ps-3 ${activeBox === 1 ? 'd-none' : 'd-block'} `}>Mission</h1>
+                    <h1 className={`felix_regular ps-3 ${activeBox === 1 || isMobile ? 'd-none' : 'd-block'} `}>Mission</h1>
 
-                    <div className={`blur rounded-4 p-3 ${activeBox === 1 ? 'show-content' : 'd-none'}`}>
+                    <div className={`blur rounded-4 p-md-3 p-2 ${activeBox === 1 || isMobile ? 'show-content' : 'd-none'}`}>
                         <h1 className="bricolage_bold">Mission</h1>
                         <p className="manrope_semibold">Prime Carbon generates sustainable projects focused on reducing carbon footprints, primarily within the voluntary carbon market, with a strong commitment to CSR</p>
                     </div>
 
                 </div>
-                <div className="col-8 mx-auto mx-md-0 col-lg-5 rounded-4 vision p-4 d-flex flex-column justify-content-end my-2 my-lg-0" onMouseEnter={() => setActiveBox(2)} onMouseLeave={() => setActiveBox(0)}>
+                <div className="col-11 mx-auto mx-md-0 col-lg-5 rounded-4 vision p-4 d-flex flex-column justify-content-end my-2 my-lg-0" onMouseEnter={() => setActiveBox(2)} onMouseLeave={() => setActiveBox(0)}>
 
-                    <h1 className={`felix_regular ps-3 ${activeBox === 2 ? 'd-none' : 'd-block'} `}>Vision</h1>
+                    <h1 className={`felix_regular ps-3 ${activeBox === 2 || isMobile ? 'd-none' : 'd-block'} `}>Vision</h1>
 
-                    <div className={`blur rounded-4 p-3 ${activeBox === 2 ? 'show-content' : 'd-none'}`}>
+                    <div className={`blur rounded-4 p-md-3 p-2 ${activeBox === 2 || isMobile ? 'show-content' : 'd-none'}`}>
                         <h1 className="bricolage_bold">Vision</h1>
                         <p className="manrope_semibold">To be global leaders in sustainable invetsments, driving impactful change and inspiring commitment to environmental stewardship</p>
                     </div>

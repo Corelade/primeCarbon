@@ -1,26 +1,33 @@
-.wwdbi{
+.wwdbi {
     background-image: url('../images/wwdbi2.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     /* width: 100%; */
 }
-.figures>div:not(:last-child){
-    border-right: 1px solid white;
+
+.figures>div:not(:last-child) {
+    border-right: 1px solid  rgba(255, 255, 255, 0.20);
 }
-.activeDetail{
+
+.activeDetail {
     transform: scale(1.1, 1.1);
     transition: .5s;
     /* box-shadow: 1px 1px 5px black; */
 }
 
+.figures {
+    height: auto;
+}
+
 @keyframes anim {
-    0%{
+    0% {
         transform: translate(-50px, -50px);
         opacity: 0.3;
         /* box-shadow: rgb(96, 93, 97) 0px 0px 0px 0px; */
     }
-    100%{
+
+    100% {
         transform: translate(0px);
         opacity: 1;
         /* box-shadow: rgba(255, 224, 178, 0) 0px 0px 0px 80px; */
@@ -32,4 +39,23 @@
     animation-duration: .3s;
     -webkit-animation-timing-function: linear;
     /* animation-direction: ; */
+}
+
+@media screen and (max-width:768px) {
+    .figures {
+        height: auto;
+        text-align: center;
+
+    }
+    .figures>div:not(:last-child) {
+        border-right: none
+    }
+    .figures>div:nth-child(odd){
+        border-right: 1px solid rgba(255, 255, 255, 0.20);
+        /* opacity: 0.2; */
+    }
+    .figures>div:nth-child(-n+2){
+        margin-bottom: 20px;
+    }
+
 }

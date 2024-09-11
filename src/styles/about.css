@@ -71,3 +71,19 @@
     animation-name: show;
     animation-duration: 1s;
 }
+
+.values{
+    width: 700px;
+}
+
+@media screen and (max-width:768px){
+    .mission, .vision{
+        height: 250px;
+    }
+    .overlay::before{
+        height: 830px;
+    }
+    .values{
+        width: 200px;
+    }
+}

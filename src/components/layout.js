@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 // import logoWhite from '../images/logo-white.png';
 import logo2 from '../images/logo2.png';
+import logo3 from '../images/logo3.png';
 import '../styles/layout.css';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 
 export default function Layout({ children, useBackground }) {
@@ -32,30 +34,30 @@ function Navbar(props) {
     const { useBackground = true } = props;
     const path = window.location.pathname;
     const navigate = useNavigate();
-    // const [addColor, setAddColor] = useState(false);
+    const [show, setShow] = useState(false);
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+    const [dark, setDark] = useState(false);
 
-    // useEffect(() => {
+    let display = 'none';
+    if (show) {
+        display = 'block';
+    } else {
+        display = 'none'
+    }
 
-    //     const handleScroll = () => {
-    //         if (window.scrollY > 67) {
-    //             setAddColor(true);
-    //         } else {
-    //             setAddColor(false);
-    //         }
-    //     };
-
-    //     window.addEventListener('scroll', handleScroll);
-
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    // }, []);
+    useEffect(() => {
+        if (isMobile) {
+            if (path === '/about' || path === '/projects') {
+                setDark(true);
+            }
+        }
+    }, [])
 
 
     return (
-        <nav className={`text-white d-flex flex-row align-items-center justify-content-between px-3 px-lg-5 w-100 position-relative ${useBackground && 'add-color'}`} style={{ height: '130px', zIndex: 100 }}>
+        <nav className={`text-white d-flex flex-row align-items-center justify-content-between px-3 px-lg-5 w-100 position-relative ${useBackground && !isMobile && 'add-color'}`} style={{ height: '130px', zIndex: 100 }}>
             <div>
-                <img src={logo2} alt='PrimeCarbon Logo' className='curs logo' />
+                <img src={dark ? logo3 : logo2} alt='PrimeCarbon Logo' className='curs logo' />
             </div>
             <div className='d-flex flex-row nav_links manrope_regular d-none d-md-flex'>
                 <div className={`${path === '/' && 'activePage'} rounded-pill`} onClick={() => navigate('/')}>Home</div>
@@ -67,9 +69,26 @@ function Navbar(props) {
                 <div className={`${path === '/contact' && 'activePage'} rounded-pill`} onClick={() => navigate('/contact')}>Contact Us</div>
             </div>
             <div className='d-md-none curs'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                </svg>
+                {dark ? (
+                    <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg" className='dropdown_menu position-relative mb-3' onClick={() => setShow(!show)}>
+                        <path d="M2.3335 19.3334H25.6668M2.3335 11.0001H25.6668M2.3335 2.66675H25.6668" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                ) : (
+                    <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg" className='dropdown_menu position-relative mb-3' onClick={() => setShow(!show)}>
+                        <path d="M2.33337 19.3334H25.6667M2.33337 11.0001H25.6667M2.33337 2.66675H25.6667" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                )}
+                <div className='dropdown-content position-absolute p-2 bg-secondary' style={{ display, right: '0', width: '160px' }}>
+                    <div className={`${path === '/' && 'activePage'} mb-2 p-1`} onClick={() => navigate('/')}>Home</div>
+                    <div className={`${path === '/about' && 'activePage'} mb-2 p-1`} onClick={() => navigate('/about')}>About Us</div>
+                    <div className={`${path === '/what-we-do' && 'activePage'} mb-2 p-1`} onClick={() => navigate('/what-we-do')}>What We Do</div>
+                    <div className={`${path === '/projects' && 'activePage'} mb-2 p-1`} onClick={() => navigate('/projects')}>
+                        Our Projects</div>
+                    <div className={`${path === '/publications' && 'activePage'} mb-2 p-1`} onClick={() => navigate('/publications')}>Publications</div>
+                    <div className={`${path === '/contact' && 'activePage'} mb-2 p-1`} onClick={() => navigate('/contact')}>Contact Us</div>
+                </div>
+
             </div>
         </nav>
 
@@ -80,25 +99,12 @@ function Footer() {
     return (
         <>
             <FAQ />
-            <div className='px-0 px-md-4'>
+            <div className='px-0 px-md-4 d-none d-md-block'>
                 <div className='p-5' style={{ backgroundColor: '#F1F1F1' }}>
-                    {/* <div className='cus1 h-100 d-flex align-items-center px-2 px-md-5 text-white'>
-                        <div className='w-75 h-50 flex-column justify-content-around d-none d-md-flex'>
-                            <h1 className='bricolage_semibold'>Power that Doesn't Cost the Earth</h1>
-                            <p className='inter_regular w-75'>If you need advice then give us a call on 07745593882 or hit the button below to request a call back!</p>
-                            <button className='rounded-pill text-white p-2 w-25 manrope_bold' style={{ backgroundColor: '#1E3A5F', border: 'none' }}>
-                                Contact Us
-                            </button>
-                        </div>
-                        <button className='rounded-pill text-white p-2 col-6 col-md-6 manrope_bold d-md-none' style={{ backgroundColor: '#1E3A5F', border: 'none' }}>
-                            Contact Us
-                        </button>
-                    </div> */}
-
                 </div>
             </div>
-            <nav className='footer_nav d-flex flex-row p-3 p-md-5 justify-content-between flex-wrap' style={{ backgroundColor: '#F9F9F9', color: '#37424C' }}>
-                <div className='col-12 col-md-3 px-3 order-4 order-md-1'>
+            <nav className='footer_nav d-flex flex-column flex-md-row p-3 p-md-5 justify-content-between flex-wrap' style={{ backgroundColor: '#F9F9F9', color: '#37424C' }}>
+                <div className='col-12 col-md-6 col-lg-3 px-3 order-1 order-md-1'>
                     <h2 className='felix_regular'>Prime Carbon</h2>
                     <div className='manrope_regular'>
                         Creating significant social & environmental impacts through a combination of traditional conservation efforts and cutting-edge technologies.
@@ -143,7 +149,7 @@ function Footer() {
 
                     </div>
                 </div>
-                <div className='col-5 col-md-3 px-3 order-1 order-md-2'>
+                <div className='col-12 col-md-6 col-lg-3 px-3 order-2 order-md-2 my-3 my-md-0'>
                     <h5 className='felix_regular mb-3'>Quick Links</h5>
                     <div className='manrope_regular'>
                         <div className='my-2'>About Us</div>
@@ -152,7 +158,7 @@ function Footer() {
                         <div className='my-2'>News/Blog</div>
                     </div>
                 </div>
-                <div className='col-5 col-md-3 px-3 order-2 order-md-3'>
+                <div className='col-12 col-md-6 col-lg-3 px-3 order-3 order-md-3 my-3 my-md-0'>
                     <h5 className='felix_regular mb-3'>Contact Us</h5>
                     <div className='manrope_regular'>
                         <div className='my-2 d-flex flex-row align-items-center'>
@@ -177,7 +183,7 @@ function Footer() {
                     </div>
 
                 </div>
-                <div className='col-12 col-md-3 px-3 order-3 order-md-4 my-3 my-md-0'>
+                <div className='col-12 col-md-6 col-lg-3 px-3 order-4 order-md-4 my-3 my-md-0'>
                     <h5 className='felix_regular mb-3'>Newsletter</h5>
                     <div className="input-group input-group-lg manrope_regular">
                         <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder='Enter your email' style={{ fontSize: '15px' }} />
@@ -251,14 +257,14 @@ function FAQ() {
                             </div>
                             <div>
                                 {/* {activeQuestion === question.id ? ( */}
-                                    {/* <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                {/* <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7.13464 0.841863L1.10196 6.87454C0.589384 7.38712 0.589384 8.21513 1.10196 8.72772C1.61454 9.2403 2.44256 9.2403 2.95514 8.72772L8.0678 3.6282L13.1673 8.72772C13.6799 9.2403 14.5079 9.2403 15.0205 8.72772C15.5331 8.21513 15.5331 7.38712 15.0205 6.87454L8.98782 0.841863C8.48838 0.329283 7.64722 0.329283 7.13464 0.841863Z" fill="white" />
                                     </svg> */}
 
                                 {/* ) : ( */}
-                                    <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" className={`${activeQuestion === question.id ? 'change-angle' : 'reverse-angle'}`}>
-                                        <path d="M13.1671 1.25345L8.0676 6.35297L2.96808 1.25345C2.4555 0.740873 1.62748 0.740873 1.1149 1.25345C0.602324 1.76603 0.602324 2.59405 1.1149 3.10663L7.14758 9.13931C7.66016 9.65189 8.48818 9.65189 9.00076 9.13931L15.0334 3.10663C15.546 2.59405 15.546 1.76603 15.0334 1.25345C14.5209 0.754017 13.6797 0.740873 13.1671 1.25345Z" fill={`${activeQuestion === question.id ? 'white' : "#232A42"}`} />
-                                    </svg>
+                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" className={`${activeQuestion === question.id ? 'change-angle' : 'reverse-angle'}`}>
+                                    <path d="M13.1671 1.25345L8.0676 6.35297L2.96808 1.25345C2.4555 0.740873 1.62748 0.740873 1.1149 1.25345C0.602324 1.76603 0.602324 2.59405 1.1149 3.10663L7.14758 9.13931C7.66016 9.65189 8.48818 9.65189 9.00076 9.13931L15.0334 3.10663C15.546 2.59405 15.546 1.76603 15.0334 1.25345C14.5209 0.754017 13.6797 0.740873 13.1671 1.25345Z" fill={`${activeQuestion === question.id ? 'white' : "#232A42"}`} />
+                                </svg>
 
                                 {/* )} */}
                             </div>

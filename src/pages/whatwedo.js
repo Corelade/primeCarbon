@@ -1,34 +1,44 @@
 import Layout from "../components/layout";
 import '../styles/whatwedo.css';
 import checkbox_white from '../images/checkbox_white.png';
-
+import { useMediaQuery } from 'react-responsive';
 
 export default function WhatWeDo() {
+
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+
+    let mt;
+    let myHeight = '600px'
+    if(isMobile){
+        mt = '-130px';
+        myHeight = '830px'
+    }
+
     return (
         <Layout useBackground={true}>
-            <div className="px-4">
-                <div style={{ backgroundColor: '#F1F1F1' }} className="px-5">
-                    <div style={{ height: '600px' }} className="rounded-bottom-4">
+            <div className="px-0 px-md-4" style={{marginTop:mt}}>
+                <div style={{ backgroundColor: '#F1F1F1' }} className="px-0 px-md-5">
+                    <div style={{ height: myHeight }} className="rounded-bottom-4">
                         <div style={{ height: '85%' }} className="d-flex flex-column justify-content-center align-items-center mx-auto text-white wwdbi anim">
-                            <h1 className="felix_regular" style={{ fontSize: '50px' }}>Beyond Borders</h1>
-                            <p className="mulish_regular col-6 text-center">
+                            <h1 className="felix_regular">Beyond Borders</h1>
+                            <p className="mulish_regular col-12 col-md-6 text-center">
                                 Our comprehensive approach to project development, strong stakeholder engagement, and dedication to high standards of verification and transparency ensure that we continue to grow and thrive in the evolving carbon market.
                             </p>
                         </div>
-                        <div className="d-flex flex-row rounded-bottom-4 text-white align-items-center justify-content-between px-5 figures" style={{ backgroundColor: '#043A3A', height: '15%' }}>
-                            <div className="d-flex flex-column align-items-center col-3">
+                        <div className="d-flex flex-row rounded-bottom-4 text-white align-items-center justify-content-between p-3 px-md-5 flex-wrap figures text-center" style={{ backgroundColor: '#043A3A'}}>
+                            <div className="d-flex flex-column align-items-center col-6 col-md-3 flex-wrap">
                                 <h1 className="felix_regular m-0">1.2M<span style={{ color: 'green' }}>+</span></h1>
                                 <div className="mulish_regular">Hectares of forest protected</div>
                             </div>
-                            <div className="d-flex flex-column align-items-center col-3">
+                            <div className="d-flex flex-column align-items-center col-6 col-md-3">
                                 <h1 className="felix_regular m-0">2k<span style={{ color: 'green' }}>+</span></h1>
                                 <div className="mulish_regular">Hectares of forest protected</div>
                             </div>
-                            <div className="d-flex flex-column align-items-center col-3">
+                            <div className="d-flex flex-column align-items-center col-6 col-md-3">
                                 <h1 className="felix_regular m-0">$12M<span style={{ color: 'green' }}>+</span></h1>
                                 <div className="mulish_regular">Hectares of forest protected</div>
                             </div>
-                            <div className="d-flex flex-column align-items-center col-3">
+                            <div className="d-flex flex-column align-items-center col-6 col-md-3">
                                 <h1 className="felix_regular m-0">124<span style={{ color: 'green' }}>+</span></h1>
                                 <div className="mulish_regular">Hectares of forest protected</div>
                             </div>
@@ -41,7 +51,7 @@ export default function WhatWeDo() {
                                 Transparency and community engagement are at the heart of everything we do. We ensure that all our projects align with broader social and environmental goals, actively involving local communities in sustainable development and educational programs. This collaborative approach helps us address environmental challenges while contributing to the socio-economic upliftment of the communities we serve.˝
                             </p>
                         </div>
-                        <div className="my-5 py-5">
+                        <div className="my-0 my-md-5 py-5">
                             {/* <WhatWeDoDetails /> */}
                             <OurDifferences />
                         </div>
@@ -178,10 +188,10 @@ function OurDifferences() {
     ]
 
     return(
-        <div className="d-flex flex-row flex-wrap justify-content-between">
+        <div className="d-flex flex-column flex-md-row flex-wrap justify-content-between">
             {points.map((point, i)=>{
                 return (
-                    <div className="col-5 p-4 mb-3 d-flex flex-column justify-content-center align-items-center">
+                    <div className="col-12 col-md-5 p-1 p-md-4 mb-0 mb-md-3 d-flex flex-column justify-content-center align-items-center">
                         <img src={checkbox_white} height={'50px'} width={'50px'} alt="checkbox"/>
                         <h5 className="felix_regular my-4">{point.title}</h5>
                         <p className="col-10 text-center">{point.content}</p>
