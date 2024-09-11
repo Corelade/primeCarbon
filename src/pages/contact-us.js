@@ -12,7 +12,7 @@ export default function ContactPage() {
                     <div className="w-50">
                         <div className="h-100 d-flex flex-column justify-content-center">
                             <div className="thirdbg h-75 rounded-3 p-4 text-black bg-light move-right">
-                                <div className="p-2d bg-white rounded-3 d-flex flex-column align-items-center overflow-auto">
+                                <div className="p-3 bg-white rounded-3 d-flex flex-column align-items-center overflow-auto">
                                     <h1 className="felix_regular semi_large_text">Contact Us</h1>
                                     <p className="text-center manrope_regular" style={{ color: '#67748E', fontSize: '12px' }}>
                                         For further enquiries, partnerships, please email hello@creative-
