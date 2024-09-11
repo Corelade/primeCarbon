@@ -1,18 +1,11 @@
 import Layout from "../components/layout";
 import '../styles/whatwedo.css';
-// import ourp2 from '../images/ourp2.png';
-// import { useState } from "react";
-// import comper1 from '../images/comper1.png';
-// import comper2 from '../images/comper2.png';
-// import comper3 from '../images/comper3.png';
-// import comper4 from '../images/comper4.png';
 import checkbox_white from '../images/checkbox_white.png';
 
 
 export default function WhatWeDo() {
     return (
         <Layout useBackground={true}>
-            {/* <div style={{ height: '130px' }} className="bg-black"></div> */}
             <div className="px-4">
                 <div style={{ backgroundColor: '#F1F1F1' }} className="px-5">
                     <div style={{ height: '600px' }} className="rounded-bottom-4">
@@ -21,9 +14,6 @@ export default function WhatWeDo() {
                             <p className="mulish_regular col-6 text-center">
                                 Our comprehensive approach to project development, strong stakeholder engagement, and dedication to high standards of verification and transparency ensure that we continue to grow and thrive in the evolving carbon market.
                             </p>
-                            {/* <div className="wwdcb manrope_bold">
-                                Contact Us Now
-                            </div> */}
                         </div>
                         <div className="d-flex flex-row rounded-bottom-4 text-white align-items-center justify-content-between px-5 figures" style={{ backgroundColor: '#043A3A', height: '15%' }}>
                             <div className="d-flex flex-column align-items-center col-3">

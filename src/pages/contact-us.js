@@ -1,7 +1,7 @@
 import Layout from "../components/layout";
 import '../styles/about.css';
 import '../styles/contact.css';
-import cus from '../images/cus.png';
+import cus from '../images/cus.webp';
 
 export default function ContactPage() {
     return (

@@ -1,12 +1,10 @@
 import Layout from "../components/layout";
-// import abc1 from '../images/abc1.png';
-import abc2 from '../images/abc2.png';
-// import checkbox from '../images/checkbox.png';
+import abc2 from '../images/abc2.webp';
 import '../styles/about.css';
 import '../styles/home.css';
 import { useState } from "react";
 import values2 from '../images/values2.png';
-import ourp_main from '../images/ourp_main.png';
+import ourp_main from '../images/ourp_main.webp';
 import { ExploreProjectButton } from "./home";
 import { MissionVision } from "./home";
 
@@ -131,7 +129,6 @@ function StakeHolders() {
 
 export function CustomBg() {
     const path = window.location.pathname;
-    // console.log(path)
 
     return (
         <div style={{ height: '700px' }} className="">
