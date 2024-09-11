@@ -12,3 +12,7 @@
 .small{
     font-size: 12px;
 }
+.move-right{
+    transform: translateX(100px);
+    z-index: 1;
+}

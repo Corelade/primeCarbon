@@ -8,6 +8,7 @@ import { useState } from "react";
 import values2 from '../images/values2.png';
 import ourp_main from '../images/ourp_main.png';
 import { ExploreProjectButton } from "./home";
+import { MissionVision } from "./home";
 
 export default function About() {
 
@@ -28,33 +29,7 @@ export default function About() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 d-flex flex-row justify-content-around my-5 py-5 text-white">
-                        <div className="col-5 rounded-4 mission p-4 d-flex flex-column justify-content-end" onMouseEnter={() => setActiveBox(1)} onMouseLeave={() => setActiveBox(0)}>
-                            {activeBox !== 1 ? (
-                                <h1 className="felix_regular">Mission</h1>
-                            ) : (
-                                <div className="blur rounded-4 p-3">
-                                    <h1 className="bricolage_bold">Mission</h1>
-                                    <p className="manrope_semibold">Prime Carbon generates sustainable projects focused on reducing carbon footprints, primarily within the voluntary carbon market, with a strong commitment to CSR</p>
-                                </div>
-                            )}
-                            {/* <h1 className={`bricolage_bold ${activeBox === 1 ? 'd-none' : 'd-block'}`}>Mission</h1>
-                            <div className={`blur rounded-4 p-3 ${activeBox === 1 ? 'show' : 'd-none'}`}>
-                                <h1 className="bricolage_bold">Mission</h1>
-                                <p className="manrope_semibold">Prime Carbon generates sustainable projects focused on reducing carbon footprints, primarily within the voluntary carbon market, with a strong commitment to CSR</p>
-                            </div> */}
-                        </div>
-                        <div className="col-5 rounded-4 vision p-4 d-flex flex-column justify-content-end" onMouseEnter={() => setActiveBox(2)} onMouseLeave={() => setActiveBox(0)}>
-                            {activeBox !== 2 ? (
-                                <h1 className="felix_regular">Vision</h1>
-                            ) : (
-                                <div className="blur rounded-4 p-3">
-                                    <h1 className="bricolage_bold">Vision</h1>
-                                    <p className="manrope_semibold">To be global leaders in sustainable invetsments, driving impactful change and inspiring commitment to environmental stewardship</p>
-                                </div>
-                            )}
-                        </div>
-                    </div>
+                    <MissionVision />
                     <div className="my-5 d-flex flex-column align-items-center p-5">
                         <h1 className="felix_regular" style={{ color: '#07260E', fontSize: '50px' }}>Our Values</h1>
                         <p style={{ color: '#5A7184' }}>
@@ -65,7 +40,7 @@ export default function About() {
                         </div>
                     </div>
                     <div className="my-5 py-5">
-                        <h1 className="felix_regular text-center semi_large_text" style={{ color:'#1E3A5F' }}>Board of Directors</h1>
+                        <h1 className="felix_regular text-center semi_large_text" style={{ color: '#1E3A5F' }}>Board of Directors</h1>
                         <div className="my-3 col-12 d-flex flex-row overflow-x-scroll">
                             <StakeHolders />
                             <StakeHolders />
@@ -75,7 +50,7 @@ export default function About() {
                         </div>
                     </div>
                     <div className="my-5 py-5">
-                        <h1 className="felix_regular text-center semi_large_text" style={{ color:'#1E3A5F'  }}>Management Team</h1>
+                        <h1 className="felix_regular text-center semi_large_text" style={{ color: '#1E3A5F' }}>Management Team</h1>
                         <div className="my-3 col-12 d-flex flex-row overflow-x-scroll">
                             <StakeHolders />
                             <StakeHolders />
@@ -138,11 +113,19 @@ function WhyChooseUsDetails() {
 }
 
 function StakeHolders() {
+
+    const [active, setActive] = useState(false);
+
     return (
-        <div style={{ height: '400px' }} className="border col-3 rounded-4 stakeholder p-3 d-flex flex-column justify-content-end mx-3">
-            <div className="rounded-4 text-center text-white stakeholder-text-body">
-                <h1 className="bricolage_semibold">Jason Umar</h1>
-                <p className="manrope_semibold">CE0/Co-founder</p>
+        <div style={{ height: '400px' }} className={`border col-3 rounded-4 stakeholder p-3 d-flex flex-column ${active ? 'justify-content-center' : 'justify-content-end'} mx-3`} onMouseEnter={()=>setActive(true)} onMouseLeave={()=>setActive(false)}>
+            <div className={`rounded-4 text-center text-white ${active && 'show'} stakeholder-text-body pt-2`}>
+                <div className={`${active ? 'd-none' : 'd-block'}`}>
+                    <h3 className="felix_regular">Jason Umar</h3>
+                    <p className="manrope_semibold">CE0/Co-founder</p>
+                </div>
+                <div className={`${active ? 'd-block' : 'd-none'}`}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, elit nec consequat aliquam, odio turpis varius velit, nec tincidunt purus erat nec nisi. Proin vitae tellus ac metus facilisis malesuada. Integer nec purus non eros efficitur volutpat. Cras euismod nulla eu risus sagittis, at cursus eros suscipit. Vivamus in velit risus. Duis facilisis vehicula lectus a euismod. 
+                </div>
             </div>
         </div>
     )
@@ -161,13 +144,13 @@ export function CustomBg() {
                     {path === '/projects' ? (
                         <div className="p-5 h-75 d-flex flex-column justify-content-center">
                             <h1 className="felix_regular big_text">Our Projects</h1>
-                            <p className="mulish_regular small_text" style={{color: '#525252' }}>Discover how Prime Carbon is making a difference through our groundbreaking projects. From restoring vital forests and advancing clean energy solutions to empowering local communities and driving impactful carbon sequestration efforts, each initiative is designed to create lasting environmental and social benefits. Explore our projects to see how we are combining cutting-edge technology with community engagement to build a more sustainable and resilient future for our planet.</p>
+                            <p className="mulish_regular small_text" style={{ color: '#525252' }}>Discover how Prime Carbon is making a difference through our groundbreaking projects. From restoring vital forests and advancing clean energy solutions to empowering local communities and driving impactful carbon sequestration efforts, each initiative is designed to create lasting environmental and social benefits. Explore our projects to see how we are combining cutting-edge technology with community engagement to build a more sustainable and resilient future for our planet.</p>
                             <ExploreProjectButton def={true} />
                         </div>
                     ) : (
                         <div className="p-5 h-75 d-flex flex-column justify-content-center">
                             <h1 className="felix_regular big_text">Who is Prime Carbon?</h1>
-                            <p className="mulish_regular small_text" style={{color: '#525252' }}>
+                            <p className="mulish_regular small_text" style={{ color: '#525252' }}>
                                 Prime Carbon is a project generation company dedicated to sustainable solutions in the carbon footprint sector, with a strong emphasis on Corporate Social Responsibility (CSR). Our deep personal commitment extends to both the environment and the communities we serve, as many of our team members have grown up in developing countries and have witnessed the environmental and social challenges these regions face. While we have excelled in our respective fields, our true goal is to become better stewards of the environment and contribute to the sustainable growth and empowerment of local communities.
                             </p>
                         </div>
