@@ -38,7 +38,7 @@ function Navbar(props) {
     const isMobile = useMediaQuery({ maxWidth: 768 });
     const [dark, setDark] = useState(false);
 
-    let display = 'none';
+    // let display = 'none';
     let myClass;
     if (show) {
         myClass = 'show-sidebar';
