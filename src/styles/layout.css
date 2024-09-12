@@ -98,11 +98,12 @@
     }
 } */
 
-.change-angle{
+.change-angle {
     transform: rotate(180deg);
     transition: .5s;
 }
-.reverse-angle{
+
+.reverse-angle {
     transform: rotate(0deg);
     transition: .5s;
 }
@@ -118,6 +119,12 @@
         width: 90px;
     }
 
+    .activePage {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+    }
+
     /* .big_text {
         font-size: 30px;
     } */
@@ -131,17 +138,55 @@
     }
 }
 
-@media screen and (min-width: 1440px){
-    body{
-        width: 1440px; 
+@media screen and (min-width: 1440px) {
+    body {
+        width: 1440px;
         /* border: 10px solid red; */
         margin: auto;
     }
 }
 
-.dropdown-content{
-    display: none;
+.dropdown-content {
+    width: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
 }
-.dropdown_menu:hover .dropdown-content{
-    display: block;
+
+.show-sidebar {
+    width: 100%;
+}
+
+.hide-sidebar {
+    width: 0%;
+}
+
+.dropdown-content-links {
+    position: relative;
+    top: 25%;
+    text-align: center;
+}
+.dropdown-content-links div{
+    font-weight: bold;
+    /* opacity: 0.1; */
+}
+
+.closebtn {
+    position: absolute;
+    top: 25px;
+    right: 45px;
+    font-size: 25px;
+}
+
+@keyframes make-opaque {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.make-opaque{
+    animation-name: make-opaque;
+    animation-duration: .6s;
 }

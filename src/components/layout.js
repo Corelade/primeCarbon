@@ -39,10 +39,11 @@ function Navbar(props) {
     const [dark, setDark] = useState(false);
 
     let display = 'none';
+    let myClass;
     if (show) {
-        display = 'block';
+        myClass = 'show-sidebar';
     } else {
-        display = 'none'
+        myClass = 'hide-sidebar';
     }
 
     useEffect(() => {
@@ -70,23 +71,28 @@ function Navbar(props) {
             </div>
             <div className='d-lg-none curs'>
                 {dark ? (
-                    <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg" className='dropdown_menu position-relative mb-3' onClick={() => setShow(!show)}>
+                    <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg" className='dropdown_menu position-relative mb-3' onClick={() => setShow(true)}>
                         <path d="M2.3335 19.3334H25.6668M2.3335 11.0001H25.6668M2.3335 2.66675H25.6668" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 ) : (
-                    <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg" className='dropdown_menu position-relative mb-3' onClick={() => setShow(!show)}>
+                    <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg" className='dropdown_menu position-relative mb-3' onClick={() => setShow(true)}>
                         <path d="M2.33337 19.3334H25.6667M2.33337 11.0001H25.6667M2.33337 2.66675H25.6667" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
 
                 )}
-                <div className='dropdown-content position-absolute p-2 bg-secondary' style={{ display, right: '0', width: '160px' }}>
-                    <div className={`${path === '/' && 'activePage'} mb-2 p-1`} onClick={() => navigate('/')}>Home</div>
-                    <div className={`${path === '/about' && 'activePage'} mb-2 p-1`} onClick={() => navigate('/about')}>About Us</div>
-                    <div className={`${path === '/what-we-do' && 'activePage'} mb-2 p-1`} onClick={() => navigate('/what-we-do')}>What We Do</div>
-                    <div className={`${path === '/projects' && 'activePage'} mb-2 p-1`} onClick={() => navigate('/projects')}>
-                        Our Projects</div>
-                    <div className={`${path === '/publications' && 'activePage'} mb-2 p-1`} onClick={() => navigate('/publications')}>Publications</div>
-                    <div className={`${path === '/contact' && 'activePage'} mb-2 p-1`} onClick={() => navigate('/contact')}>Contact Us</div>
+                <div className={`dropdown-content position-fixed top-0 text-black ${myClass}`} style={{ left: '0', height: '100%', backgroundColor: 'rgb(241, 241, 241)' }}>
+                    <div onClick={() => setShow(false)} className='closebtn'>
+                        &times;
+                    </div>
+                    <div className={`dropdown-content-links ${!show && 'make-opaque'}`}>
+                        <div className={`${path === '/' && ''} mb-2 p-1`} onClick={() => navigate('/')}>Home</div>
+                        <div className={`${path === '/about' && ''} mb-2 p-1`} onClick={() => navigate('/about')}>About Us</div>
+                        <div className={`${path === '/what-we-do' && ''} mb-2 p-1`} onClick={() => navigate('/what-we-do')}>What We Do</div>
+                        <div className={`${path === '/projects' && ''} mb-2 p-1`} onClick={() => navigate('/projects')}>
+                            Our Projects</div>
+                        <div className={`${path === '/publications' && ''} mb-2 p-1`} onClick={() => navigate('/publications')}>Publications</div>
+                        <div className={`${path === '/contact' && ''} mb-2 p-1`} onClick={() => navigate('/contact')}>Contact Us</div>
+                    </div>
                 </div>
 
             </div>
