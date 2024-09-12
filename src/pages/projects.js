@@ -34,7 +34,7 @@ function ProjectDetails() {
                 <div className="col-12 col-md-6 d-flex flex-row justify-content-center align-items-center order-2 order-md-1">
                     <img src={ourp4} alt="Our Project Images" className="project-image"/>
                 </div>
-                <div className="col-12 col-md-6 order-1 order-md-2 text-center">
+                <div className="col-12 col-md-6 order-1 order-md-2 text-center text-md-start">
                     <h1 className="felix_regular " style={{color:'#1E3A5F'}}>Project 1 - BR</h1>
                     <div className="manrope_semibold " style={{color:'#1E3A5F99'}}>
                         <div>
