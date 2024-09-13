@@ -19,24 +19,26 @@ export default function Home() {
                             <div className="flex-column justify-content-around px-3 d-flex" style={{ height: '100%' }}>
                                 <div className="" style={{ height: '' }}></div>
                                 <div className="">
-                                    <h1 className="text-center felix_regular" style={{fontSize:'45px'}}>Empowering a Sustainable Future</h1>
+                                    <h1 className="text-center felix_regular" style={{ fontSize: '45px' }}>Empowering a Sustainable Future</h1>
                                 </div>
                                 <div className="d-flex flex-row justify-content-center">
-                                    <div className="border rounded-circle d-flex flex-row align-items-center justify-content-center bg-white" style={{ width: '70px', height: '70px', cursor: 'pointer' }} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" fill="black" className={`bi bi-arrow-down-short ${hovered && 'moveDown'}`} viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
-                                        </svg>
-                                    </div>
+                                    <a href="#wtpc">
+                                        <div className="border rounded-circle d-flex flex-row align-items-center justify-content-center bg-white" style={{ width: '70px', height: '70px', cursor: 'pointer' }} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" fill="black" className={`bi bi-arrow-down-short ${hovered && 'moveDown'}`} viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                                            </svg>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="px-0 px-md-4">
+                    <div className="px-0 px-md-4" id="wtpc">
                         <div style={{ backgroundColor: '#F1F1F1' }} className="py-5">
                             <div className="my-0 my-md-5">
                                 <div className="p-0 p-md-5 d-flex flex-row justify-content-center">
                                     <div className="col-10 col-md-8">
-                                        <h1 className="felix_regular text-center" style={{ color: '#101828', fontSize:'30px' }}>Welcome to Prime Carbon</h1>
+                                        <h1 className="felix_regular text-center" style={{ color: '#101828', fontSize: '30px' }}>Welcome to Prime Carbon</h1>
                                         <p className="manrope_regular text-center my-5" style={{ color: '#475467' }}>Founded in 2024, We are a sustainability-focused company dedicated to preserving our planet through innovative environmental solutions. We specialize in carbon sequestration, afforestation, and reforestation initiatives, along with the development of clean energy solutions, including wind and solar power, carbon capture, and energy storage.</p>
                                         <div className="d-flex flex-column align-items-center">
                                             <div className="">
