@@ -11,7 +11,7 @@ export default function ContactPage() {
                 <div className="h-100 flex-row d-none d-md-flex" style={{ backgroundColor: '#F1F1F1' }}>
                     <div className="w-50">
                         <div className="h-100 d-flex flex-column justify-content-center">
-                            <div className="thirdbg h-75 rounded-3 p-4 text-black bg-light move-right">
+                            <div className="thirdbg h-75 rounded-3 p-4 text-black dbfilter move-right">
                                 <div className="p-3 bg-white rounded-3 d-flex flex-column align-items-center overflow-auto">
                                     <h1 className="felix_regular semi_large_text">Contact Us</h1>
                                     <p className="text-center manrope_regular" style={{ color: '#67748E', fontSize: '12px' }}>

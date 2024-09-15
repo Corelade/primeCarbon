@@ -120,7 +120,7 @@ function StakeHolders() {
                     <h3 className="felix_regular">Jason Umar</h3>
                     <p className="manrope_semibold">CE0/Co-founder</p>
                 </div>
-                <div className={`${active ? 'd-block' : 'd-none'}`}>
+                <div className={`${active ? 'd-block bdfilter' : 'd-none'}`}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, elit nec consequat aliquam, odio turpis varius velit, nec tincidunt purus erat nec nisi. Proin vitae tellus ac metus facilisis malesuada. Integer nec purus non eros efficitur volutpat. Cras euismod nulla eu risus sagittis, at cursus eros suscipit. Vivamus in velit risus. Duis facilisis vehicula lectus a euismod. 
                 </div>
             </div>

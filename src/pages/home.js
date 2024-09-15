@@ -124,7 +124,7 @@ export function MissionVision() {
 
                     <h1 className={`felix_regular ps-3 ${activeBox === 1 || isMobile ? 'd-none' : 'd-block'} `}>Mission</h1>
 
-                    <div className={`blur rounded-4 p-md-3 p-2 ${activeBox === 1 || isMobile ? 'show-content' : 'd-none'}`}>
+                    <div className={`blur rounded-4 p-md-3 p-2 ${activeBox === 1 || isMobile ? 'show-content' : 'd-none'} bdfilter`}>
                         <h1 className="bricolage_bold">Mission</h1>
                         <p className="manrope_semibold">Prime Carbon generates sustainable projects focused on reducing carbon footprints, primarily within the voluntary carbon market, with a strong commitment to CSR</p>
                     </div>
@@ -134,7 +134,7 @@ export function MissionVision() {
 
                     <h1 className={`felix_regular ps-3 ${activeBox === 2 || isMobile ? 'd-none' : 'd-block'} `}>Vision</h1>
 
-                    <div className={`blur rounded-4 p-md-3 p-2 ${activeBox === 2 || isMobile ? 'show-content' : 'd-none'}`}>
+                    <div className={`blur rounded-4 p-md-3 p-2 ${activeBox === 2 || isMobile ? 'show-content' : 'd-none'} bdfilter`}>
                         <h1 className="bricolage_bold">Vision</h1>
                         <p className="manrope_semibold">To be global leaders in sustainable invetsments, driving impactful change and inspiring commitment to environmental stewardship</p>
                     </div>

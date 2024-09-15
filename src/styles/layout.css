@@ -190,3 +190,8 @@
     animation-name: make-opaque;
     animation-duration: .6s;
 }
+
+.bdfilter{
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
