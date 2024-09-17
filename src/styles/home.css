@@ -23,10 +23,10 @@ html {
 }
 
 .home_sect_with_bg {
-    background-image: url('../images/home_bg2.webp');
-    /* background-size: contain; */
+    background-image: url('../images/2.gif');
+    background-size: cover;
     background-repeat: no-repeat;
-    /* background-position: center; */
+    background-position: center;
 }
 
 .green_text {
