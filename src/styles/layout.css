@@ -196,3 +196,6 @@
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
 }
+.home_text {
+    text-shadow: 2px 2px 2px #222222;
+}

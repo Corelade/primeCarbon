@@ -23,7 +23,7 @@ export default function Home() {
                     <div className="position-absolute flex-column justify-content-around px-3 d-flex" style={{ height: '100%', width: '100%' }}>
                         <div className="" style={{ height: '' }}></div>
                         <div className="">
-                            <h1 className="text-center text-white felix_regular" style={{ fontSize: '45px' }}>Empowering a Sustainable Future</h1>
+                            <h1 className="home_text text-center text-white felix_regular" style={{ fontSize: '45px' }}>Empowering a Sustainable Future</h1>
                         </div>
                         <div className="d-flex flex-row justify-content-center">
                             <a href="#wtpc">
