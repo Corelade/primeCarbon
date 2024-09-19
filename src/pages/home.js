@@ -4,7 +4,7 @@ import { useState } from "react";
 import ourp1 from '../images/ourp1.png';
 import map from '../images/map.png';
 import { useMediaQuery } from 'react-responsive';
-
+import bgVideo from '../images/vecteezy2.mp4';
 
 export default function Home() {
 
@@ -14,7 +14,39 @@ export default function Home() {
         <Layout useBackground={false}>
             <div className="bg-white">
                 <div className="h-100" style={{ marginTop: '-130px' }}>
-                    <div>
+                <section class="hero-section flex items-center" style={{ height: "830px" }}>
+                    <div class="vimeo-bg">
+                        <video autoPlay muted loop playsInline class="self-hosted-bg-video">
+                            <source src={bgVideo} type="video/mp4" />
+                        </video>
+                    </div>
+                    <div className="position-absolute flex-column justify-content-around px-3 d-flex" style={{ height: '100%', width: '100%' }}>
+                        <div className="" style={{ height: '' }}></div>
+                        <div className="">
+                            <h1 className="text-center text-white felix_regular" style={{ fontSize: '45px' }}>Empowering a Sustainable Future</h1>
+                        </div>
+                        <div className="d-flex flex-row justify-content-center">
+                            <a href="#wtpc">
+                                <div className="border rounded-circle d-flex flex-row align-items-center justify-content-center bg-white" style={{ width: '70px', height: '70px', cursor: 'pointer' }} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" fill="black" className={`bi bi-arrow-down-short ${hovered && 'moveDown'}`} viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    {/* <div class="rk-container offset-container">
+                        <div class="title-wrap" data-aos="fade-up">
+                            <h1 class="h5">Investing in better</h1>
+                            <h2 class="h1">We invest globally in projects with sustainable objectives</h2>
+                        </div>
+                        <img src="https://carbonfirst.com/wp-content/themes/carbonfirst/assets/img/carbon-first-wordmark.svg" alt="Carbon First" class="hero-logo" data-aos="fade-up" />
+                    </div>
+                    <a href="#scroll-to-content">
+                        <img src="https://carbonfirst.com/wp-content/themes/carbonfirst/assets/img/scroll-down.svg" alt="Scroll Down" class="scroll-down-btn" />
+                    </a> */}
+                </section>
+                    {/* <div>
                         <div className="home_sect_with_bg text-white d-flex flex-column justify-content-between" style={{ height: "830px" }}>
                             <div className="flex-column justify-content-around px-3 d-flex" style={{ height: '100%' }}>
                                 <div className="" style={{ height: '' }}></div>
@@ -32,7 +64,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="px-0 px-md-4" id="wtpc">
                         <div style={{ backgroundColor: '#F1F1F1' }} className="py-5">
                             <div className="my-0 my-md-5">

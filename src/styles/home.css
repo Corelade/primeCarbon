@@ -124,3 +124,32 @@ html {
         height: 200px;
     }
 }
+
+.hero-section {
+    padding: 200px 0 200px;
+    min-height: 830px;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-color: #1E0A0A;
+    overflow: hidden;
+}
+.vimeo-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+    background-color: #000000;
+}
+.rk-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
